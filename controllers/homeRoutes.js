@@ -1,13 +1,22 @@
 const { MODEL } = require("../models");
 const withAuth = require("../utils/auth");
+const { getRandElements } = require("../utils/helpers");
 
 const router = require("express").Router();
 
 // Home Page
+
 router.get("/", async (req, res) => {
-  //   const postData = await MODEL.findAll({ include: [{ model: MODEL }] });
-  //   const posts = postData.map((post) => post.get({ plain: true }));
-  //   console.log(posts);
+  // const month = new Date(date).getMonth() + 1;
+  // const day = new Date(date).getDate();
+  //   const postData = await MODEL.findAll({
+  //   where: {
+  //     day: day,
+  //     month: month
+  //   }
+  //  });
+  //   const posts = postData.map((post) => postData.get({ plain: true }));
+  //   const randList = getRandElements(posts, 10);
   //   res.render("home", { posts });
 });
 

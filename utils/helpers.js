@@ -7,4 +7,15 @@ module.exports = {
       new Date(date).getFullYear() + 5
     }`;
   },
+  getRandElements: (list, len) => {
+    const randList = [];
+    for (let i = 0; i < len; i++) {
+      if (list.length > 0) {
+        const pos = Math.floor(Math.random() * list.length);
+        randList.push(list[pos]);
+        list.splice(pos, 1);
+      }
+    }
+    return randList;
+  },
 };
