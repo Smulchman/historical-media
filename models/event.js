@@ -38,4 +38,4 @@ Event.init(
   }
 );
 
-module.exports = Blog;
+module.exports = Event;
