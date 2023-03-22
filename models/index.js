@@ -1,6 +1,7 @@
-const User = require("./User");
-const Blog = require("./Blog");
-const Event = require("./Event");
+const User = require("./user");
+const Blog = require("./blog");
+const Event = require("./event");
+// adding a comment so it will let me commit and add
 
 // Users have many Blogs relationship
 User.hasMany(Blog, {
