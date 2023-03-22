@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS events_db;
+DROP DATABASE IF EXISTS history_db;
 
-CREATE DATABASE events_db;
+CREATE DATABASE history_db;
 
-USE events_db;
+USE history_db;
