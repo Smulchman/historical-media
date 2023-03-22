@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
   //   const posts = postData.map((post) => postData.get({ plain: true }));
   //   const randList = getRandElements(posts, 10);
   //   res.render("home", { randList });
-  res.render("homepage");
+  res.render("main");
 });
 
 router.get("/all-events", async (req, res) => {
