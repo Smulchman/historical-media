@@ -26,7 +26,7 @@ Event.init(
     },
     // 'wikipedia' value from API gives an array of objects, each object containing a wikipedia link and a simple title for that link. Likely to contain several links.
     wikipedia: {
-        type: DataTypes.ARRAY,
+        type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
   },
