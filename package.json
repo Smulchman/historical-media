@@ -1,12 +1,12 @@
 {
   "name": "historical-media",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -20,15 +20,19 @@
   },
   "homepage": "https://github.com/Smulchman/historical-media#readme",
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.0.4",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "dotenv": "^8.6.0",
+    "express": "^4.18.2",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "mysql2": "^2.2.5",
     "node-cron": "^3.0.2",
     "sequelize": "^6.3.5"
+  },
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
   }
 }
