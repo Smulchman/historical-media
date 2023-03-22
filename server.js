@@ -37,10 +37,6 @@ app.use(routes);
 
 scheduler();
 
-fetch("https://byabbe.se/on-this-day/3/22/events.json")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
