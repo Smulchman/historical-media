@@ -6,11 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/index.js",
-<<<<<<< HEAD
-    "watch":"nodemon server.js"
-=======
     "watch": "nodemon server.js"
->>>>>>> 0d8ffe0ef878f07d10b6b462f2d5c11d41e55a6a
   },
   "repository": {
     "type": "git",
