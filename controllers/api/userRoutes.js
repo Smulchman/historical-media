@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
     });
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.id = dbUserdata.id;
+      //req.session.id = dbUserdata.id;
       res.status(200).json(dbUserdata);
     });
   } catch (err) {
@@ -48,12 +48,22 @@ router.post("/login", async (req, res) => {
     // If everything is good, tell user "good job"
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.id = dbUserdata.id;
+      //req.session.id = dbUserdata.id;
       res.status(200).json({ user: dbUserdata, message: "Logged in!" });
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
+  }
+});
+
+router.post("/logout", (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
 

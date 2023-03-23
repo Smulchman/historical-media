@@ -18,12 +18,11 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 // get all the blogs of this user GET("api/blog")
-router.get("/dashboard", withAuth, async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
-    console.log(req.session);
     const userBlogs = Blog.findAll({
       where: {
-        user_id: req.session.id,
+        user_id: req.params.id,
       },
     });
     res.status(200).json(userBlogs);
