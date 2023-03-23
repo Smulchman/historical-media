@@ -44,6 +44,7 @@ router.post("/login", async (req, res) => {
       return;
     }
 
+    // If everything is good, tell user "good job"
     req.session.save(() => {
       req.session.loggedIn = true;
 
