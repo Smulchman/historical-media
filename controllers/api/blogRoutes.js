@@ -9,6 +9,7 @@ router.post("/", withAuth, async (req, res) => {
       title: req.body.title,
       content: req.body.content,
       event_id: req.body.event_id,
+      user_id: req.session.user_id,
     });
     res.status(200).json(dbBlogData);
   } catch (err) {
@@ -17,12 +18,13 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-// get all the blogs of this user GET("api/blog")
-router.get("/:id", withAuth, async (req, res) => {
+// get all the blogs of this user GET("api/blog/dashboard")
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
-    const userBlogs = Blog.findAll({
+    console.log(req.session);
+    const userBlogs = await Blog.findAll({
       where: {
-        user_id: req.params.id,
+        user_id: req.session.user_id,
       },
     });
     res.status(200).json(userBlogs);
