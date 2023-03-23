@@ -769,6 +769,6 @@ const eventData = [
     }
   ];
 
-  const seedEvents = () => Gallery.bulkCreate(eventData);
+  const seedEvents = () => Event.bulkCreate(eventData);
 
   moodule.exports = seedEvents;
