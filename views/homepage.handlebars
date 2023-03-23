@@ -6,76 +6,12 @@
     </div>
   </div>
 </div>
-{{! This container will have the facts about today }}
 
 <div class="container" id="main">
-  <div class="card">
-    <div class="card-header">
-      Year
-    </div>
-    <div class="card-body">
-      {{! <h5 class="card-title">Special title treatment</h5> }}
-      <p class="card-text">Event description.</p>
-      <a href="#" class="btn btn-primary">Link to more info</a>
-    </div>
-  </div>
+  
+     {{#each randList as |event|}}
+    {{> partial event}}
+    {{/each}}
+    
 </div>
-<div class="container" id="main">
-  <div class="card">
-    <div class="card-header">
-      Year
-    </div>
-    <div class="card-body">
-      {{! <h5 class="card-title">Special title treatment</h5> }}
-      <p class="card-text">Event description.</p>
-      <a href="#" class="btn btn-primary">Link to more info</a>
-    </div>
-  </div>
-</div>
-<div class="container" id="main">
-  <div class="card">
-    <div class="card-header">
-      Year
-    </div>
-    <div class="card-body">
-      {{! <h5 class="card-title">Special title treatment</h5> }}
-      <p class="card-text">Event description.</p>
-      <a href="#" class="btn btn-primary">Link to more info</a>
-    </div>
-  </div>
-</div>
-<div class="container" id="main">
-  <div class="card">
-    <div class="card-header">
-      Year
-    </div>
-    <div class="card-body">
-      {{! <h5 class="card-title">Special title treatment</h5> }}
-      <p class="card-text">Event description.</p>
-      <a href="#" class="btn btn-primary">Link to more info</a>
-    </div>
-  </div>
-</div>
-<div class="container" id="main">
-  <div class="card">
-    <div class="card-header">
-      Year
-    </div>
-    <div class="card-body">
-      {{! <h5 class="card-title">Special title treatment</h5> }}
-      <p class="card-text">Event description.</p>
-      <a href="#" class="btn btn-primary">Link to more info</a>
-    </div>
-  </div>
-</div>
-<div class="card text-center">
 
-  <div class="card-body">
-    <h5 class="card-title">Change this for history media logo!</h5>
-    <p class="card-text">Share your thoughts with a comment/blog post.</p>
-    <a href="#" class="btn btn-primary">Your Blogs</a>
-  </div>
-  <div class="card-footer text-muted">
-    Never know what happened on this day!
-  </div>
-</div>
