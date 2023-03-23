@@ -28,11 +28,27 @@ router.post("/login", async (req, res) => {
         email: req.body.email,
       },
     });
-    // If no or wrong email/username, try again
+    // If wrong email/username, try again
     if (!dbUserdata) {
       res.status(400).json({ message: "Incorrect email. Please try again." });
       return;
     }
+    // Password Checker
+    const validPassword = await dbUserdata.checkPassword(req.body.password);
+
+    // If wrong password, try again
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: "Incorrect password. Please try again." });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+
+      res.status(200).json({ user: dbUserdata, message: "Logged in!" });
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
