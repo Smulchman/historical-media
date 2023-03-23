@@ -42,3 +42,7 @@
   --s: calc(50% + 0.61em);
   color: #e22e2e;
 }
+
+#link {
+  color: #085823;
+}
