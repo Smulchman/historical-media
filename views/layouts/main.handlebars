@@ -9,6 +9,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>The Historical Manias</title>
   </head>
   <body>
@@ -46,7 +47,7 @@
       </div>
     </nav>
     {{! This container has the name of our page }}
-    <div class="container-fluid">
+    <div class="container-fluid" id="main">
       <div class="card">
         <div class="mx-auto" style="width: 200px;">
           History Media
@@ -54,7 +55,8 @@
       </div>
     </div>
     {{! This container will have the facts about today }}
-    <div class="container">
+
+    <div class="container" id="main">
       <div class="card">
         <div class="card-header">
           Year
@@ -112,6 +114,20 @@
           <p class="card-text">Event description.</p>
           <a href="#" class="btn btn-primary">Link to more info</a>
         </div>
+      </div>
+    </div>
+    <div class="card text-center">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to
+          additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
       </div>
     </div>
     <script
