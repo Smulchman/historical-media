@@ -1,4 +1,4 @@
-<form class="container" id="contain">
+{{! <form class="container" id="contain">
   <div class="mb-3" id="user-name">
     <label for="username-signup" class="form-label">Username:</label>
     <input class="form-control" type="text" id="username-signup" />
@@ -29,7 +29,7 @@
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
   crossorigin="anonymous"
-></script>
+></script> }}
 {{! This container has the name of our page }}
 <div class="container-fluid">
   <div class="card" id="title">
@@ -39,7 +39,8 @@
   </div>
 </div>
 {{! This container will have the facts about today }}
-
+{{!-- {{#each events as |event|}} --}}
+{{!-- {{> event-partial event}} --}}
 <div class="container" id="main">
   <div class="card">
     <div class="card-header">

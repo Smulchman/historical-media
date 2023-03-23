@@ -18,21 +18,21 @@ router.get("/", async (req, res) => {
   //   const posts = postData.map((post) => postData.get({ plain: true }));
   //   const randList = getRandElements(posts, 10);
   //   res.render("home", { randList });
-  res.render("homepage");
+  res.render("homepage"); // render homepage template with the historic events array
 });
 
 // router.get("/all-events", async (req, res) => {
-  // const month = new Date(date).getMonth() + 1;
-  // const day = new Date(date).getDate();
-  //   const postData = await MODEL.findAll({
-  //   where: {
-  //     day: day,
-  //     month: month
-  //   }
-  //  });
-  //   const posts = postData.map((post) => postData.get({ plain: true }));
-  //   console.log(posts);
-  //   res.render("home", { posts });
+// const month = new Date(date).getMonth() + 1;
+// const day = new Date(date).getDate();
+//   const postData = await MODEL.findAll({
+//   where: {
+//     day: day,
+//     month: month
+//   }
+//  });
+//   const posts = postData.map((post) => postData.get({ plain: true }));
+//   console.log(posts);
+//   res.render("home", { posts });
 // });
 
 // Dashboard/User profile GET "/user-profile/:id"
