@@ -60,4 +60,9 @@ router.get("/", async (req, res) => {
 router.get("/login", async (req, res) => {
   res.render("login");
 });
+
+// Sign up GET "/sign-up"
+router.get("/sign-up", async (req, res) => {
+  res.render("signup");
+});
 module.exports = router;
