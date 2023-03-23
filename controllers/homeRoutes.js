@@ -1,4 +1,4 @@
-const { Event } = require("../models");
+const { Event, Blog } = require("../models");
 const withAuth = require("../utils/auth");
 const { getRandElements } = require("../utils/helpers");
 
@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
   const posts = postData.map((post) => post.get({ plain: true }));
   const randList = getRandElements(posts, 10);
 
-  const recBlogs = await Blog.findAll({
+  let recBlogs = await Blog.findAll({
     limit: 5, // retrieve only the top 5 rows
     order: [["id", "DESC"]],
   });
