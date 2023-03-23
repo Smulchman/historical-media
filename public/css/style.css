@@ -11,6 +11,7 @@
 }
 
 #contain {
+  margin-top: 25px;
   justify-content: center;
   align-items: center;
 }
@@ -27,7 +28,7 @@
 }
 
 #histori {
-  --c: #1ce45f;
+  --c: #085823;
   line-height: 1.2em;
   background:
     conic-gradient(from -135deg at 100%  50%,var(--c) 90deg,#0000 0) 0    var(--p,0%),
