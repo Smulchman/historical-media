@@ -1,3 +1,4 @@
+const { render } = require("node-sass");
 const { MODEL } = require("../models");
 const withAuth = require("../utils/auth");
 const { getRandElements } = require("../utils/helpers");
@@ -36,6 +37,7 @@ router.get("/", async (req, res) => {
 // });
 
 // Dashboard/User profile GET "/user-profile/:id"
+
 // router.get("/user-profile/:id", withAuth, async (req, res) => {
 //   try {
 //     const blogPostData = await blogPost.findByPk(req.params.id, {
@@ -54,4 +56,8 @@ router.get("/", async (req, res) => {
 //   }
 // });
 
+// Login GET "/login"
+router.get("/login", async (req, res) => {
+  res.render("login");
+});
 module.exports = router;
