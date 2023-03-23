@@ -14,6 +14,14 @@ Event.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    day: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    month: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     // year of event
     year: {
       type: DataTypes.STRING(4),
