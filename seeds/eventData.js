@@ -2,6 +2,8 @@ const { Event } = require("../models")
 
 const eventData = [
     {
+      day: 3,
+      month: 27,
       year: "1309",
       description: "Pope Clement V imposes excommunication and interdiction on Venice, and a general prohibition of all commercial intercourse with Venice, which had seized on Ferrara, a papal fiefdom.",
       wikipedia: [
@@ -12,6 +14,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1329",
       description: "Pope John XXII issues his In Agro Dominico condemning some writings of Meister Eckhart as heretical.",
       wikipedia: [
@@ -26,6 +30,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1513",
       description: "Spanish explorer Juan Ponce de León reaches the northern end of The Bahamas on his first voyage to Florida.",
       wikipedia: [
@@ -40,6 +46,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1625",
       description: "Charles I becomes King of England, Scotland and Ireland as well as claiming the title King of France.",
       wikipedia: [
@@ -54,6 +62,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1782",
       description: "Charles Watson-Wentworth, 2nd Marquess of Rockingham becomes Prime Minister of the United Kingdom.",
       wikipedia: [
@@ -68,6 +78,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1794",
       description: "The United States Government establishes a permanent navy and authorizes the building of six frigates.",
       wikipedia: [
@@ -86,6 +98,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1794",
       description: "Denmark and Sweden form a neutrality compact.",
       wikipedia: [
@@ -96,6 +110,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1809",
       description: "Peninsular War: A combined Franco-Polish force defeats the Spanish in the Battle of Ciudad Real.",
       wikipedia: [
@@ -118,6 +134,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1814",
       description: "War of 1812: In central Alabama, U.S. forces under General Andrew Jackson defeat the Creek at the Battle of Horseshoe Bend.",
       wikipedia: [
@@ -144,6 +162,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1836",
       description: "Texas Revolution: On the orders of General Antonio López de Santa Anna, the Mexican army massacres 342 Texas POWs at Goliad, Texas.",
       wikipedia: [
@@ -166,6 +186,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1866",
       description: "President Andrew Johnson vetoes the Civil Rights Act of 1866. His veto is overridden by Congress and the bill passes into law on April 9.",
       wikipedia: [
@@ -180,6 +202,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1871",
       description: "The first international rugby football match, when Scotland defeats England in Edinburgh at Raeburn Place.",
       wikipedia: [
@@ -210,6 +234,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1884",
       description: "A mob in Cincinnati, Ohio, attacks members of a jury which had returned a verdict of manslaughter in what was seen as a clear case of murder; over the next few days the mob would riot and eventually destroy the courthouse.",
       wikipedia: [
@@ -232,6 +258,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1886",
       description: "Geronimo, Apache warrior, surrenders to the U.S. Army, ending the main phase of the Apache Wars.",
       wikipedia: [
@@ -250,6 +278,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1899",
       description: "Emilio Aguinaldo leads Filipino forces for the only time during the Philippine-American War at the Battle of Marilao River.",
       wikipedia: [
@@ -272,6 +302,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1915",
       description: "Typhoid Mary, the first healthy carrier of disease ever identified in the United States, is put in quarantine, where she would remain for the rest of her life.",
       wikipedia: [
@@ -290,6 +322,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1938",
       description: "Second Sino-Japanese War: The Battle of Taierzhuang begins, resulting several weeks later in the war's first major Chinese victory over Japan.",
       wikipedia: [
@@ -304,6 +338,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1941",
       description: "World War II: Yugoslavian Air Force officers topple the pro-Axis government in a bloodless coup.",
       wikipedia: [
@@ -326,6 +362,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1943",
       description: "World War II: Battle of the Komandorski Islands: In the Aleutian Islands the battle begins when United States Navy forces intercept Japanese attempting to reinforce a garrison at Kiska.",
       wikipedia: [
@@ -348,6 +386,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1945",
       description: "World War II: Operation Starvation, the aerial mining of Japan's ports and waterways begins. Argentina declares war on the Axis Powers.",
       wikipedia: [
@@ -362,6 +402,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1958",
       description: "Nikita Khrushchev becomes Chairman of the Council of Ministers of the Soviet Union",
       wikipedia: [
@@ -380,6 +422,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1964",
       description: "The Good Friday earthquake, the most powerful earthquake recorded in North American history at a magnitude of 9.2 strikes Southcentral Alaska, killing 125 people and inflicting massive damage to the city of Anchorage.",
       wikipedia: [
@@ -406,6 +450,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1975",
       description: "Construction of the Trans-Alaska Pipeline System begins.",
       wikipedia: [
@@ -416,6 +462,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1977",
       description: "Tenerife airport disaster: Two Boeing 747 airliners collide on a foggy runway on Tenerife in the Canary Islands, killing 583 (all 248 on KLM and 335 on Pan Am). Sixty-one survived on the Pan Am flight. This is the worst aviation accident in history.",
       wikipedia: [
@@ -450,6 +498,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1980",
       description: "The Norwegian oil platform Alexander L. Kielland collapses in the North Sea, killing 123 of its crew of 212.",
       wikipedia: [
@@ -464,6 +514,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1980",
       description: "Silver Thursday: A steep fall in silver prices, resulting from the Hunt Brothers attempting to corner the market in silver, leads to panic on commodity and futures exchanges.",
       wikipedia: [
@@ -490,6 +542,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1981",
       description: "The Solidarity movement in Poland stages a warning strike, in which at least 12 million Poles walk off their jobs for four hours.",
       wikipedia: [
@@ -504,6 +558,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1986",
       description: "A car bomb explodes outside Russell Street Police HQ in Melbourne, Australia, killing one police officer and injuring 21 people.",
       wikipedia: [
@@ -526,6 +582,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1990",
       description: "The United States begins broadcasting TV Martí, an anti-Castro propaganda network, to Cuba.",
       wikipedia: [
@@ -544,6 +602,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1993",
       description: "Jiang Zemin is appointed President of the People's Republic of China.",
       wikipedia: [
@@ -558,6 +618,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1993",
       description: "Italian former minister and Christian Democracy leader Giulio Andreotti is accused of mafia allegiance by the tribunal of Palermo.",
       wikipedia: [
@@ -580,6 +642,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1998",
       description: "The Food and Drug Administration approves Viagra for use as a treatment for male impotence, the first pill to be approved for this condition in the United States.",
       wikipedia: [
@@ -598,6 +662,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "1999",
       description: "Kosovo War: An American Lockheed F-117A Nighthawk is shot down by a Yugoslav SAM, the first and only Nighthawk to be lost in combat.",
       wikipedia: [
@@ -616,6 +682,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "2000",
       description: "A Phillips Petroleum plant explosion in Pasadena, Texas kills one person and injures 71 others.",
       wikipedia: [
@@ -630,6 +698,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "2002",
       description: "Passover massacre: A Palestinian suicide bomber kills 29 people at a Passover seder in Netanya, Israel.",
       wikipedia: [
@@ -656,6 +726,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "2002",
       description: "Nanterre massacre: In Nanterre, France, a gunman opens fire at the end of a town council meeting, resulting in the deaths of eight councilors; 19 other people are injured.",
       wikipedia: [
@@ -670,6 +742,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "2004",
       description: "HMS Scylla, a decommissioned Leander-class frigate, is sunk as an artificial reef off Cornwall, the first of its kind in Europe.",
       wikipedia: [
@@ -688,6 +762,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "2009",
       description: "The dam forming Situ Gintung, an artificial lake in Indonesia, fails, killing at least 99 people.",
       wikipedia: [
@@ -702,6 +778,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "2014",
       description: "Philippines signs a peace accord with the largest Muslim rebel group, the Moro Islamic Liberation Front, ending decades of conflict.",
       wikipedia: [
@@ -724,6 +802,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "2015",
       description: "Al-Shabab militants attack and temporarily occupy a Mogadishu hotel leaving at least 20 people dead.",
       wikipedia: [
@@ -742,6 +822,8 @@ const eventData = [
       ]
     },
     {
+      day: 3,
+      month: 27,
       year: "2016",
       description: "A suicide blast in Gulshan-e-Iqbal Park, Lahore claims over 70 lives and leaves almost 300 others injured. The target of the bombing are Christians celebrating Easter.",
       wikipedia: [
