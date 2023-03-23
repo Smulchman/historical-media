@@ -25,24 +25,25 @@ Blog.init(
     },
     // foreign key for corresponding event
     event_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'event',
-          key: 'id',
-        },
+      type: DataTypes.INTEGER,
+      references: {
+        model: "event",
+        key: "id",
       },
+    },
     //   foreign key for user that wrote the blog
     user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
-        },
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
       },
+    },
   },
   {
     sequelize,
     underscored: true,
+    freezeTableName: true,
     modelName: "blog",
   }
 );
