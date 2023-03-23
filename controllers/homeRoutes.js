@@ -22,8 +22,8 @@ router.get("/", async (req, res) => {
 });
 
 // router.get("/all-events", async (req, res) => {
-// const month = new Date(date).getMonth() + 1;
-// const day = new Date(date).getDate();
+// const month = new Date().getMonth() + 1;
+// const day = new Date().getDate();
 //   const postData = await MODEL.findAll({
 //   where: {
 //     day: day,
