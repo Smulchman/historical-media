@@ -2,3 +2,15 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+/* .mx-auto {
+ 
+} */
+
+#title {
+  border-style: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
