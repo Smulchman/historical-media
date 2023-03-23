@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "watch":"nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "handlebars": "^4.7.6",
     "mysql2": "^2.2.5",
     "node-cron": "^3.0.2",
+    "nodemon": "^2.0.22",
     "sequelize": "^6.3.5"
   }
 }
