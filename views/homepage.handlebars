@@ -9,8 +9,25 @@
 
 <div class="container" id="main">
     {{#each randList as |event|}}
-    {{> partial event}}
+    {{> homepartial event}}
     {{/each}}
     
 </div>
+<div class="text-center"><button type="button" class="btn btn-outline-success">View all the day events!</button></div>
+  <div class="container" id="recentblogposts">
+    <div class="container" id="recentposts">
+  <div class="card">
+    <div class="card-header" id="username">
+      user name
+    </div>
+    <div class="card-header" id="event">
+      event
+    </div>
+    <div class="card-body">
+      <p class="card-text">blog post</p>
+    </div>
+  </div>
+  </div>
+</div>
+
 
