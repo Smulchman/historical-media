@@ -22,17 +22,17 @@ router.get("/", async (req, res) => {
 });
 
 // router.get("/all-events", async (req, res) => {
-  // const month = new Date(date).getMonth() + 1;
-  // const day = new Date(date).getDate();
-  //   const postData = await MODEL.findAll({
-  //   where: {
-  //     day: day,
-  //     month: month
-  //   }
-  //  });
-  //   const posts = postData.map((post) => postData.get({ plain: true }));
-  //   console.log(posts);
-  //   res.render("home", { posts });
+// const month = new Date(date).getMonth() + 1;
+// const day = new Date(date).getDate();
+//   const postData = await MODEL.findAll({
+//   where: {
+//     day: day,
+//     month: month
+//   }
+//  });
+//   const posts = postData.map((post) => postData.get({ plain: true }));
+//   console.log(posts);
+//   res.render("home", { posts });
 // });
 
 // Dashboard/User profile GET "/user-profile/:id"
@@ -53,5 +53,10 @@ router.get("/", async (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
+
+// Login GET "/login"
+router.get("/login", async (req, res) => {
+  res.render("login");
+});
 
 module.exports = router;
