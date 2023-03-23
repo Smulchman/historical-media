@@ -30,7 +30,9 @@ router.get("/", async (req, res) => {
 //     month: month
 //   }
 //  });
+
 //   const posts = postData.map((post) => post.get({ plain: true }));
+
 //   console.log(posts);
 //   res.render("home", { posts });
 // });
@@ -53,5 +55,15 @@ router.get("/", async (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
+
+// Login GET "/login"
+router.get("/login", async (req, res) => {
+  res.render("login");
+});
+
+// Sign Up GET "/sign-up"
+router.get("/sign-up", async (req, res) => {
+  res.render("signup");
+});
 
 module.exports = router;
