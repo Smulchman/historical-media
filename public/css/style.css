@@ -19,3 +19,8 @@
 #link {
   color: black;
 }
+
+#footer {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: RGB(25, 135, 84);
+}
