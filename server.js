@@ -36,6 +36,6 @@ app.use(routes);
 
 scheduler();
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
