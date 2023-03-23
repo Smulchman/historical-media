@@ -7,7 +7,6 @@ const routes = require("./controllers");
 const sequelize = require("./config/connection");
 const helpers = require("./utils/helpers");
 const scheduler = require("./utils/scheduler");
-const fetch = require("node-fetch");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -37,6 +36,6 @@ app.use(routes);
 
 scheduler();
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
