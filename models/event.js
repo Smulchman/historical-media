@@ -16,7 +16,7 @@ Event.init(
     },
     // year of event
     year: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING(4),
       allowNull: false,
     },
     // this actually has the simple rundown of the event in question
@@ -27,11 +27,12 @@ Event.init(
     // 'wikipedia' value from API gives an array of objects, each object containing a wikipedia link and a simple title for that link. Likely to contain several links.
     wikipedia: {
       type: DataTypes.JSON,
-      allowNull: false,
     },
   },
   {
     sequelize,
+    timestamps: false,
+    freezeTableName: true,
     underscored: true,
     freezeTableName: true,
     modelName: "event",
