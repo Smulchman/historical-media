@@ -24,7 +24,7 @@ router.get("/", async (req, res) => {
   });
   recBlogs = recBlogs.map((post) => post.get({ plain: true }));
 
-  console.log(randList);
+  //console.log(randList);
   res.render("homepage", { randList, recBlogs });
 });
 
