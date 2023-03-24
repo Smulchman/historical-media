@@ -72,4 +72,14 @@ router.get("/sign-up", async (req, res) => {
   res.render("signup");
 });
 
+// Event Get "/event"
+router.get("/event", async (req, res) => {
+  res.render("event");
+});
+
+// Blog Get "/blog"
+router.get("/blog", async (req, res) => {
+  res.render("blog");
+});
+
 module.exports = router;
