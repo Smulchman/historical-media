@@ -17,27 +17,32 @@
 }
 
 #rotate {
-    justify-content: center;
-    align-items: center;
-    transition: ease-in-out 0.5s;
-    font-family: 'Gugi', cursive;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in-out 0.5s;
+  font-family: "Gugi", cursive;
 }
 #rotate:hover {
-    box-shadow: 0 0 10px black;
-
+  box-shadow: 0 0 10px black;
 }
 
 #histori {
   --c: #085823;
   line-height: 1.2em;
-  background:
-    conic-gradient(from -135deg at 100%  50%,var(--c) 90deg,#0000 0) 0    var(--p,0%),
-    conic-gradient(from -135deg at 1.2em 50%,#0000 90deg,var(--c) 0) 100% var(--p,0%);
-  background-size: var(--s,0%) 200%;
+  background: conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0)
+      0 var(--p, 0%),
+    conic-gradient(from -135deg at 1.2em 50%, #0000 90deg, var(--c) 0) 100%
+      var(--p, 0%);
+  background-size: var(--s, 0%) 200%;
   background-repeat: no-repeat;
-  transition: .4s ease-in, background-position 0s;
+  transition: 0.4s ease-in, background-position 0s;
 }
 #histori:hover {
   --p: 100%;
-  --s: calc(50% + .61em);
-  color: #e22e2e;}
+  --s: calc(50% + 0.61em);
+  color: #e22e2e;
+}
+
+#link {
+  color: #085823;
+}

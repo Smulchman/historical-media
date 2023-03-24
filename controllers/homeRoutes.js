@@ -17,13 +17,20 @@ router.get("/", async (req, res) => {
   });
   const posts = postData.map((post) => post.get({ plain: true }));
   const randList = getRandElements(posts, 10);
+
+  const recBlogs = await Blog.findAll({
+    limit: 5, // retrieve only the top 5 rows
+    order: [["id", "DESC"]],
+  });
+  recBlogs = recBlogs.map((post) => post.get({ plain: true }));
+
   console.log(randList);
-  res.render("homepage", { randList });
+  res.render("homepage", { randList, recBlogs });
 });
 
 // router.get("/all-events", async (req, res) => {
-// const month = new Date(date).getMonth() + 1;
-// const day = new Date(date).getDate();
+// const month = new Date().getMonth() + 1;
+// const day = new Date().getDate();
 //   const postData = await MODEL.findAll({
 //   where: {
 //     day: day,
