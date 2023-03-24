@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Blog } = require("../../models");
+const { Blog, User } = require("../../models");
 const withAuth = require("../../utils/auth.js");
 
 // add a new blog POST("api/blog")
@@ -43,8 +43,19 @@ router.get("/dashboard", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
+    let userInfo = await User.findAll({
+      where: {
+        id: req.session.user_id,
+      },
+    });
     userBlogs = userBlogs.map((post) => post.get({ plain: true }));
-    res.render("userDash", { userBlogs, loggedIn: req.session.loggedIn });
+    userInfo = userInfo.get({ plain: true });
+    console.log(userInfo);
+    res.render("userDash", {
+      userBlogs,
+      userInfo,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
