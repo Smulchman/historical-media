@@ -25,7 +25,11 @@ router.get("/", async (req, res) => {
   recBlogs = recBlogs.map((post) => post.get({ plain: true }));
 
   //console.log(randList);
-  res.render("homepage", { randList, recBlogs });
+  res.render("homepage", {
+    randList,
+    recBlogs,
+    loggedIn: req.session.loggedIn,
+  });
 });
 
 router.get("/all-events", async (req, res) => {
@@ -64,12 +68,32 @@ router.get("/user-profile/:id", withAuth, async (req, res) => {
 
 // Login GET "/login"
 router.get("/login", async (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
   res.render("login");
 });
 
 // Sign Up GET "/sign-up"
 router.get("/sign-up", async (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
   res.render("signup");
+});
+
+// Event Get "/event"
+router.get("/event", async (req, res) => {
+  res.render("event");
+});
+
+// Blog Get "/blog"
+router.get("/blog", async (req, res) => {
+  res.render("blog");
 });
 
 module.exports = router;

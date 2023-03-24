@@ -20,7 +20,7 @@
         data-bs-theme="dark"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" id="home" href="#">Home</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -45,11 +45,20 @@
                 <a class="nav-link" href="#">Link</a>
               </li>
             </ul>
-            <div class="d-flex" role="login">
-              <button
-                type="button"
-                class="btn btn-outline-success login-button"
-              >Log in</button>
+            <div class="d-flex" role="login">\
+              {{#if loggedIn}}
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  id="logout"
+                >Log out</button>
+              {{else}}
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  id="login"
+                >Log in</button>
+              {{/if}}
             </div>
           </div>
         </div>
@@ -67,10 +76,12 @@
 
       </div>
     </footer>
+
     {{#if loggedIn}}
-    <script src="/js/logout.js"></script>
+      <script src="/js/logout.js"></script>
+    {{else}}
+      <script src="/js/loginButton.js"></script>
     {{/if}}
-    <script src="/js/mainlog.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
