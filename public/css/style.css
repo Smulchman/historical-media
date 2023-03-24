@@ -1,3 +1,7 @@
+body {
+  font-family: 'lora'!important;
+}
+
 #main {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -12,6 +16,7 @@
   color: #085823;
   text-align: center;
   padding-top: 5%;
+  font-family: prata!important;
 }
 
 #extrainfo {
@@ -23,7 +28,7 @@
   border-style: none;
   background-color: rgb(216, 224, 137);
   font-size: 50px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: prata!important;
 }
 
 .logo {
