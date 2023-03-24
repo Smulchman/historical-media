@@ -1,17 +1,39 @@
 {{! This container has the name of our page }}
-<div class="container-fluid">
-  <div class="card" id="title">
-    <div class="mx-auto" style="width: 500px;">
-      History Media
+<div class="container-fluid" id="rotate">
+  <div class="card"  id="title">
+    <div class="mx-auto"  style="width: 500px;">
+      <span id="histori">History</span> Media
     </div>
   </div>
 </div>
 
 <div class="container" id="main">
-  
-     {{#each randList as |event|}}
-    {{> partial event}}
+    {{#each randList as |event|}}
+    {{> homepartial event}}
     {{/each}}
     
 </div>
+<div class="text-center"><button type="button" class="btn btn-outline-success">View all the day events!</button></div>
+  
+  <div class="container" id="main">
+    {{#each recBlogs as |blog|}}
+    {{> recentblogpartial blog}}
+    {{/each}}
+  </div>
+  {{!-- <div class="container" id="recentblogposts">
+    <div class="container" id="recentposts">
+  <div class="card">
+    <div class="card-header" id="username">
+      user name
+    </div>
+    <div class="card-header" id="event">
+      event
+    </div>
+    <div class="card-body">
+      <p class="card-text">blog post</p>
+    </div>
+  </div>
+  </div>
+</div> --}}
+
 

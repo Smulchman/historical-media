@@ -1,9 +1,31 @@
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Blog title</h5>
-    <p class="card-text">Some quick example text to build on the card title and
-      make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Save Blog</a>
-    <a href="#" class="card-link">Post Blog</a>
+<div class="container" id="blogpage">
+  <div class="card" rows="10" style="height:50%">
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Blog Post Name"
+          aria-label="Blog Post Name"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+        >Post Blog</button>
+      </div>
+      <div class="input-group">
+
+        <textarea
+          rows="10"
+          style="height:10%"
+          class="form-control"
+          aria-label="With textarea"
+        ></textarea>
+      </div>
+      <a href="#" class="card-link">Save Blog</a>
+      <a href="#" class="card-link">Post Blog</a>
+    </div>
   </div>
 </div>
