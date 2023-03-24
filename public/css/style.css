@@ -1,13 +1,34 @@
+body {
+  font-family: 'lora'!important;
+}
+
 #main {
   margin-top: 25px;
   margin-bottom: 25px;
+}
+
+#recentblogposts {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+#here {
+  color: #085823;
+  text-align: center;
+  padding-top: 5%;
+  font-family: prata!important;
+}
+
+#extrainfo {
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 #title {
   border-style: none;
   background-color: rgb(216, 224, 137);
   font-size: 50px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: prata!important;
 }
 
 .logo {
@@ -57,4 +78,8 @@
 #blogpage {
   margin-top: 5%;
   margin-bottom: 5%;
+}
+
+#login {
+  margin-right: 20px;
 }

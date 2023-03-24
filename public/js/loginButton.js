@@ -10,6 +10,14 @@ document.querySelector("#home").addEventListener("click", () => {
   document.location.replace("/");
 });
 
+<<<<<<< HEAD
+=======
+// document.querySelector("#blog").addEventListener("click", (event) => {
+//   const event_id = event.target.dataset.eventId;
+//   console.log(event_id);
+//   document.location.replace(`/blog/${event_id}`);
+// });
+>>>>>>> 8e0f040b8c5be6711e4b8bf133f1e39be556c725
 document.querySelector("#dashboard").addEventListener("click", () => {
   document.location.replace("/login");
 });
