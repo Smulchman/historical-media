@@ -3,6 +3,22 @@
   margin-bottom: 25px;
 }
 
+#recentblogposts {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+#here {
+  color: #085823;
+  text-align: center;
+  padding-top: 5%;
+}
+
+#extrainfo {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
 #title {
   border-style: none;
   background-color: rgb(216, 224, 137);
