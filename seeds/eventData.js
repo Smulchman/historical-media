@@ -889,7 +889,7 @@ const eventData = [
       month: 6,
       day: 11,
       // the year in this case is supposed to be 1184 bc
-      year: "1184",
+      year: "1184 BC",
       description: "Trojan War: Troy is sacked and burned, according to calculations by Eratosthenes.",
       wikipedia: [
         {
