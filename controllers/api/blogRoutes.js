@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Blog, User } = require("../../models");
+const { Blog, User, Event } = require("../../models");
 const withAuth = require("../../utils/auth.js");
 
 // add a new blog POST("api/blog")
