@@ -40,13 +40,35 @@ function scheduler() {
             data.events[i].description !== null &&
             data.events[i].year.length < 5
           )
-            Event.create({
-              day: day,
-              month: month,
-              year: data.events[i].year,
-              description: data.events[i].description,
-              wikipedia: data.events[i].wikipedia,
-            });
+            // if event exist then do not added a dup
+            Event.findOrCreate({
+              where: {
+                day: day,
+                month: month,
+                year: data.events[i].year,
+                description: data.events[i].description,
+              },
+              defaults: {
+                day: day,
+                month: month,
+                year: data.events[i].year,
+                description: data.events[i].description,
+                wikipedia: data.events[i].wikipedia,
+              },
+            })
+              .then(([event, created]) => {
+                if (created) {
+                  console.log("New event created:", event.get({ plain: true }));
+                } else {
+                  console.log(
+                    "Event already exists:",
+                    event.get({ plain: true })
+                  );
+                }
+              })
+              .catch((err) => {
+                console.error("Error creating event:", err);
+              });
         }
       })
       .catch((error) => {
