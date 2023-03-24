@@ -42,6 +42,10 @@ router.get("/dashboard", withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+      include: {
+        model: Event,
+        required: true,
+      },
     });
     let userInfo = await User.findOne({
       where: {
@@ -51,7 +55,6 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
     userBlogs = userBlogs.map((post) => post.get({ plain: true }));
     userInfo = userInfo.get({ plain: true });
-    console.log(userInfo);
     res.render("userDash", {
       userBlogs,
       userInfo,
