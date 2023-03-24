@@ -98,9 +98,14 @@ router.get("/blog", async (req, res) => {
   res.render("blog");
 });
 
-// Blog UserDash "/blog"
+// Blog UserDash "/userDash"
 router.get("/userDash", async (req, res) => {
   res.render("userDash");
+});
+
+// Blog extrainfo "/extrainfo"
+router.get("/extrainfo", async (req, res) => {
+  res.render("extrainfo");
 });
 
 module.exports = router;
