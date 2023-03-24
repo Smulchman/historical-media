@@ -26,6 +26,8 @@ const eventData = [
     ]
   },
   {
+    month: 2,
+    day: 29,
     year: "1964",
     description: "In Sydney, Australian swimmer Dawn Fraser sets a new world record in the 100-meter freestyle swimming competition (58.9 seconds).",
     wikipedia: [
@@ -944,6 +946,8 @@ const eventData = [
       ]
     },
     {
+      month: 6,
+      day: 11,
       year: "1895",
       description: "Paris-Bordeaux-Paris, sometimes called the first automobile race in history or the \"first motor race\", takes place.",
       wikipedia: [
