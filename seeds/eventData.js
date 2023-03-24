@@ -12,16 +12,16 @@ const eventData = [
         wikipedia: "https://wikipedia.org/wiki/HMHS_Britannic"
       },
       {
-        "title": "RMS Titanic",
-        "wikipedia": "https://wikipedia.org/wiki/RMS_Titanic"
+        title: "RMS Titanic",
+        wikipedia: "https://wikipedia.org/wiki/RMS_Titanic"
       },
       {
-        "title": "Harland and Wolff",
-        "wikipedia": "https://wikipedia.org/wiki/Harland_and_Wolff"
+        title: "Harland and Wolff",
+        wikipedia: "https://wikipedia.org/wiki/Harland_and_Wolff"
       },
       {
-        "title": "Belfast",
-        "wikipedia": "https://wikipedia.org/wiki/Belfast"
+        title: "Belfast",
+        wikipedia: "https://wikipedia.org/wiki/Belfast"
       }
     ]
   },
@@ -888,7 +888,8 @@ const eventData = [
     {
       month: 6,
       day: 11,
-      year: "1184 BC",
+      // the year in this case is supposed to be 1184 bc
+      year: "1184",
       description: "Trojan War: Troy is sacked and burned, according to calculations by Eratosthenes.",
       wikipedia: [
         {
@@ -949,7 +950,7 @@ const eventData = [
       month: 6,
       day: 11,
       year: "1895",
-      description: "Paris-Bordeaux-Paris, sometimes called the first automobile race in history or the \"first motor race\", takes place.",
+      description: 'Paris-Bordeaux-Paris, sometimes called the first automobile race in history or the "first motor race", takes place.',
       wikipedia: [
         {
           title: "Paris-Bordeaux-Paris",

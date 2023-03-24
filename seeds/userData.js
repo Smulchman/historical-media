@@ -29,12 +29,14 @@ const userData = [
   {
     username: 'AlienOyi',
     email: "daijinmin78@gmail.com",
-    password: "Joker.Str1kes.Again",
+    // original password: Joker.Str1kes.Again
+    password: "$2a$10$CGmoAIGjmiBl.yiFDKIPHenlOV0My22kAFEQWZPrg4Eo1c7hh1Bte",
   },
   {
     username: 'LaertXH',
     email: "laertxhumari@gmail.com",
-    password: "D_Cage_Sucks",
+    // original password: D_Cage_Sucks
+    password: "$2a$10$sg4BaK7/sVayKg8.n36u3ue3oubemERtsWoQI.1Qyzh.TmiObC5Wa",
   },
 ];
 
