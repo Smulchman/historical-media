@@ -63,7 +63,7 @@ const blogData = [
     title: 'Andrew Johnson was Always a Terrible Pick for Lincolns VP',
     content: `It's pretty remarkable that congress managed to overturn the veto. I guess that's at least one thing reconstruction got right, before it all fell to pieces.`,
     event_id: "8",
-    user_id: "2",
+    user_id: "5",
   },
 ];
 
