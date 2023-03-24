@@ -21,7 +21,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-// get up to 5 most recent blogs GET("api/blog/dashboard")
+// get up to 5 most recent blogs GET("api/blog")
 router.get("/", async (req, res) => {
   try {
     const recBlogs = await Blog.findAll({

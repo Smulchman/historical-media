@@ -1,4 +1,4 @@
-const { Event, Blog } = require("../models");
+const { Event, Blog, User } = require("../models");
 const withAuth = require("../utils/auth");
 const { getRandElements } = require("../utils/helpers");
 
@@ -21,6 +21,11 @@ router.get("/", async (req, res) => {
   let recBlogs = await Blog.findAll({
     limit: 5, // retrieve only the top 5 rows
     order: [["id", "DESC"]],
+    include: {
+      model: User,
+      required: true,
+      attributes: { exclude: ["password"] },
+    },
   });
   recBlogs = recBlogs.map((post) => post.get({ plain: true }));
   console.log(recBlogs);
