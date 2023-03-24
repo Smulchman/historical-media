@@ -14,6 +14,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 - [Usage](#usage)
 - [License](#license)
 - [Contribution](#contribution)
+- [Credits](#credits)
 - [Tests](#test)
 - [Questions](#questions)
 
@@ -23,19 +24,37 @@ To install this application, you need clone the repository. To clone the reposit
 
 ## Usage
 
+When you load into the website, you will see a small list of historical events that occured on the current day and a feed of people who made a post on one of the events. You can go to the events page to view more events. You can click on one of the events on the homepage or events page, which will let you to create a post about the event, allowing you to say something about the post. However, you must sign up and login with your own email and password in order to create a post of the events. To sign up or login, You can either click on the respective buttons to take you to their page. Attempting to create a post will also redirect to the sign up or login page if you have not logged in.
+
+<!-- ADD SCREENSHOTS OR VIDEOS HERE IF NEED BE -->
+
 ## License
 
 This application license is: MIT
 
-##Contribution
+## Contribution
 
-later
+Sam,
+Elvis,
+Jimmy,
+Laert,
+Jared
+
+## Credits
+
+Express-
+Mysql-
+Sequelize-
+Node.js-
+Handlebars-
+Mysql2-
+Scheduler-
 
 ## Tests
 
-none
+none currently (may be subject to change)
 
 ## Questions
 
-My GitHub is later
-If you have any questions, please contact me on my email at later. I will reach back to you as soon as possible
+The GitHub used to host the files of this application is (INSERT SAM GITHUB)
+If you have any questions, please contact us on the GitHub. We will reach back to you as soon as possible
