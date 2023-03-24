@@ -23,13 +23,13 @@ router.post("/", async (req, res) => {
 // Login POST ("api/users/login")
 router.post("/login", async (req, res) => {
   try {
-    // Email/Username Checker
+    // Email Checker
     const dbUserdata = await User.findOne({
       where: {
         email: req.body.email,
       },
     });
-    // If wrong email/username, try again
+    // If wrong email, try again
     if (!dbUserdata) {
       res.status(400).json({ message: "Incorrect email. Please try again." });
       return;

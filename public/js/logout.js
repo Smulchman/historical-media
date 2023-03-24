@@ -15,3 +15,6 @@ document.querySelector("#logout").addEventListener("click", logout);
 document.querySelector("#home").addEventListener("click", () => {
   document.location.replace("/");
 });
+document.querySelector("#dashboard").addEventListener("click", () => {
+  document.location.replace("/api/blog/dashboard");
+});
