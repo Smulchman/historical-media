@@ -10,9 +10,15 @@ document.querySelector("#home").addEventListener("click", () => {
   document.location.replace("/");
 });
 
-document.querySelector("#blog").addEventListener("click", () => {
-  document.location.replace("/blog");
-});
 document.querySelector("#dashboard").addEventListener("click", () => {
   document.location.replace("/login");
 });
+
+const blogButtons = document.querySelectorAll(".blog");
+
+for (let i = 0; i < blogButtons.length; i++) {
+  blogButtons[i].addEventListener("click", (event) => {
+    const event_id = event.target.getAttribute("data-eventId");
+    document.location.replace(`/blog/${event_id}`);
+  });
+}

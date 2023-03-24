@@ -3,12 +3,12 @@ const { Event, Blog, User } = require("../models");
 const fetch = require("node-fetch");
 
 function scheduler() {
-  cron.schedule("0 0 0 * * *", () => {
+  cron.schedule("0 0 0 * * *", async () => {
     const month = new Date().getMonth() + 1;
     const day = new Date().getDate();
 
     //delete all events from the event table that have no blogs written about them
-    Event.findAll({
+    await Event.findAll({
       include: {
         model: Blog,
         required: true, // only return rows that have blogs written about them
