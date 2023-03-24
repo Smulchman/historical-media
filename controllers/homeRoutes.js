@@ -93,22 +93,9 @@ router.get("/404", async (req, res) => {
   res.render("404");
 });
 
-// // Blog Get "/blog"
-// router.get("/blog", withAuth, async (req, res) => {
-//   if (!req.session.loggedIn) {
-//     res.render("login");
-//     req.session.event_id = event_id;
-//     return;
-//   } else res.render("blog");
-// });
-
-router.get("/blog/:id", async (req, res) => {
-  if (req.session.loggedIn) {
-    // req.session.event_id = req.params.id;
-    res.render("blog");
-    // res.redirect(`/blog/${req.session.event_id}`);
-    return;
-  } else res.render("login");
+// Blog Get "/blog"
+router.get("/blog/:id", withAuth, async (req, res) => {
+  res.render("blog");
 });
 
 // Blog UserDash "/userDash"
