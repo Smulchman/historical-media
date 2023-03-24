@@ -5,7 +5,9 @@
         {{title}}
       </div>
       <div class="card-header" id="event">
-        {{user.username}}
+        {{! You can access user data like so user.username
+              You can access event data like so event.year }}
+        {{event.description}}
       </div>
       <div class="card-body">
         <p class="card-text">{{content}}</p>
