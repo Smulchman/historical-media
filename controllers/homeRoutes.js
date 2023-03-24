@@ -89,8 +89,8 @@ router.get("/sign-up", async (req, res) => {
 });
 
 // Event Get "/event"
-router.get("/event", async (req, res) => {
-  res.render("event");
+router.get("/404", async (req, res) => {
+  res.render("404");
 });
 
 // // Blog Get "/blog"
