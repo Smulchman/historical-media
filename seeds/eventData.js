@@ -2,6 +2,7 @@ const { Event } = require("../models")
 
 const eventData = [
   {
+    // 1
     month: 2,
     day: 26,
     year: "1914",
@@ -26,6 +27,7 @@ const eventData = [
     ]
   },
   {
+    // 2
     month: 2,
     day: 29,
     year: "1964",
@@ -38,6 +40,7 @@ const eventData = [
     ]
   },
     {
+      // 3
       month: 3,
       day: 27,
       year: "1309",
@@ -50,6 +53,7 @@ const eventData = [
       ]
     },
     {
+      // 4
       month: 3,
       day: 27,
       year: "1329",
@@ -66,6 +70,7 @@ const eventData = [
       ]
     },
     {
+      // 5
       month: 3,
       day: 27,
       year: "1513",
@@ -82,6 +87,7 @@ const eventData = [
       ]
     },
     {
+      // 6
       month: 3,
       day: 27,
       year: "1625",
@@ -98,6 +104,7 @@ const eventData = [
       ]
     },
     {
+      // 7
       month: 3,
       day: 27,
       year: "1782",
@@ -114,6 +121,7 @@ const eventData = [
       ]
     },
     {
+      // 8
       month: 3,
       day: 27,
       year: "1794",
@@ -134,6 +142,7 @@ const eventData = [
       ]
     },
     {
+      // 9
       month: 3,
       day: 27,
       year: "1794",
@@ -146,6 +155,7 @@ const eventData = [
       ]
     },
     {
+      // 10
       month: 3,
       day: 27,
       year: "1809",
@@ -170,6 +180,7 @@ const eventData = [
       ]
     },
     {
+      // 11
       month: 3,
       day: 27,
       year: "1814",
@@ -198,6 +209,7 @@ const eventData = [
       ]
     },
     {
+      // 12
       month: 3,
       day: 27,
       year: "1836",
@@ -222,6 +234,7 @@ const eventData = [
       ]
     },
     {
+      // 13
       month: 3,
       day: 27,
       year: "1866",
@@ -238,6 +251,7 @@ const eventData = [
       ]
     },
     {
+      // 14
       month: 3,
       day: 27,
       year: "1871",
@@ -270,6 +284,7 @@ const eventData = [
       ]
     },
     {
+      // 15
       month: 3,
       day: 27,
       year: "1884",
@@ -294,6 +309,7 @@ const eventData = [
       ]
     },
     {
+      // 16
       month: 3,
       day: 27,
       year: "1886",
@@ -314,6 +330,7 @@ const eventData = [
       ]
     },
     {
+      // 17
       month: 3,
       day: 27,
       year: "1899",
@@ -338,6 +355,7 @@ const eventData = [
       ]
     },
     {
+      // 18
       month: 3,
       day: 27,
       year: "1915",
@@ -358,6 +376,7 @@ const eventData = [
       ]
     },
     {
+      // 19
       month: 3,
       day: 27,
       year: "1938",
@@ -374,6 +393,7 @@ const eventData = [
       ]
     },
     {
+      // 20
       month: 3,
       day: 27,
       year: "1941",
@@ -398,6 +418,7 @@ const eventData = [
       ]
     },
     {
+      // 21
       month: 3,
       day: 27,
       year: "1943",
@@ -422,6 +443,7 @@ const eventData = [
       ]
     },
     {
+      // 22
       month: 3,
       day: 27,
       year: "1945",
@@ -438,6 +460,7 @@ const eventData = [
       ]
     },
     {
+      // 23
       month: 3,
       day: 27,
       year: "1958",
@@ -458,6 +481,7 @@ const eventData = [
       ]
     },
     {
+      // 24
       month: 3,
       day: 27,
       year: "1964",
@@ -486,6 +510,7 @@ const eventData = [
       ]
     },
     {
+      // 25
       month: 3,
       day: 27,
       year: "1975",
@@ -498,6 +523,7 @@ const eventData = [
       ]
     },
     {
+      // 26
       month: 3,
       day: 27,
       year: "1977",
@@ -534,6 +560,7 @@ const eventData = [
       ]
     },
     {
+      // 27
       month: 3,
       day: 27,
       year: "1980",
@@ -550,6 +577,7 @@ const eventData = [
       ]
     },
     {
+      // 28
       month: 3,
       day: 27,
       year: "1980",
@@ -578,6 +606,7 @@ const eventData = [
       ]
     },
     {
+      // 29
       month: 3,
       day: 27,
       year: "1981",
@@ -594,6 +623,7 @@ const eventData = [
       ]
     },
     {
+      // 30
       month: 3,
       day: 27,
       year: "1986",
@@ -618,6 +648,7 @@ const eventData = [
       ]
     },
     {
+      // 31
       month: 3,
       day: 27,
       year: "1990",
@@ -638,6 +669,7 @@ const eventData = [
       ]
     },
     {
+      // 32
       month: 3,
       day: 27,
       year: "1993",
@@ -654,6 +686,7 @@ const eventData = [
       ]
     },
     {
+      // 33
       month: 3,
       day: 27,
       year: "1993",
@@ -678,6 +711,7 @@ const eventData = [
       ]
     },
     {
+      // 34
       month: 3,
       day: 27,
       year: "1998",
@@ -698,6 +732,7 @@ const eventData = [
       ]
     },
     {
+      // 35
       month: 3,
       day: 27,
       year: "1999",
@@ -718,6 +753,7 @@ const eventData = [
       ]
     },
     {
+      // 36
       month: 3,
       day: 27,
       year: "2000",
@@ -734,6 +770,7 @@ const eventData = [
       ]
     },
     {
+      // 37
       month: 3,
       day: 27,
       year: "2002",
@@ -762,6 +799,7 @@ const eventData = [
       ]
     },
     {
+      // 38
       month: 3,
       day: 27,
       year: "2002",
@@ -778,6 +816,7 @@ const eventData = [
       ]
     },
     {
+      // 39
       month: 3,
       day: 27,
       year: "2004",
@@ -798,6 +837,7 @@ const eventData = [
       ]
     },
     {
+      // 40
       month: 3,
       day: 27,
       year: "2009",
@@ -814,6 +854,7 @@ const eventData = [
       ]
     },
     {
+      // 41
       month: 3,
       day: 27,
       year: "2014",
@@ -838,6 +879,7 @@ const eventData = [
       ]
     },
     {
+      // 42
       month: 3,
       day: 27,
       year: "2015",
@@ -858,6 +900,7 @@ const eventData = [
       ]
     },
     {
+      // 43
       month: 3,
       day: 27,
       year: "2016",
@@ -886,9 +929,10 @@ const eventData = [
       ]
     },
     {
+      // 44
       month: 6,
       day: 11,
-      // the year in this case is supposed to be 1184 bc
+      // the year in this event is supposed to be 1184 bc
       year: "1184 BC",
       description: "Trojan War: Troy is sacked and burned, according to calculations by Eratosthenes.",
       wikipedia: [
@@ -907,6 +951,7 @@ const eventData = [
       ]
     },
     {
+      // 45
       month: 6,
       day: 11,
       year: "1776",
@@ -947,6 +992,7 @@ const eventData = [
       ]
     },
     {
+      // 46
       month: 6,
       day: 11,
       year: "1895",
