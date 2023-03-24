@@ -43,11 +43,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
-    let userInfo = await User.findAll({
-      where: {
-        id: req.session.user_id,
-      },
-    });
+    let userInfo = await User.findByPk(req.session.user_id);
     userBlogs = userBlogs.map((post) => post.get({ plain: true }));
     userInfo = userInfo.get({ plain: true });
     console.log(userInfo);
