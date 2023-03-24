@@ -10,9 +10,11 @@ document.querySelector("#home").addEventListener("click", () => {
   document.location.replace("/");
 });
 
-document.querySelector("#blog").addEventListener("click", () => {
-  document.location.replace("/blog");
-});
+// document.querySelector("#blog").addEventListener("click", (event) => {
+//   const event_id = event.target.dataset.eventId;
+//   console.log(event_id);
+//   document.location.replace(`/blog/${event_id}`);
+// });
 document.querySelector("#dashboard").addEventListener("click", () => {
   document.location.replace("/login");
 });

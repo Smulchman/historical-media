@@ -18,3 +18,7 @@ document.querySelector("#home").addEventListener("click", () => {
 document.querySelector("#dashboard").addEventListener("click", () => {
   document.location.replace("/api/blog/dashboard");
 });
+document.querySelector("#blog").addEventListener("click", (event) => {
+  const dataElement = event.target.getAttribute("data-eventId");
+  document.location.replace(`/blog/${dataElement}`);
+});
