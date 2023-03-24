@@ -1,8 +1,3 @@
-#contain {
-    margin-top: 70px;
-    margin-left:200px;
-      
-}
 #main {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -10,8 +5,49 @@
 
 #title {
   border-style: none;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  background-color: rgb(216, 224, 137);
   font-size: 50px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#contain {
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+#rotate {
+  justify-content: center;
+  align-items: center;
+  transition: ease-in-out 0.5s;
+  font-family: "Gugi", cursive;
+}
+#rotate:hover {
+  box-shadow: 0 0 10px black;
+}
+
+#histori {
+  --c: #085823;
+  line-height: 1.2em;
+  background: conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0)
+      0 var(--p, 0%),
+    conic-gradient(from -135deg at 1.2em 50%, #0000 90deg, var(--c) 0) 100%
+      var(--p, 0%);
+  background-size: var(--s, 0%) 200%;
+  background-repeat: no-repeat;
+  transition: 0.4s ease-in, background-position 0s;
+}
+#histori:hover {
+  --p: 100%;
+  --s: calc(50% + 0.61em);
+  color: #e22e2e;
+}
+
+#link {
+  color: #085823;
+}
+
+#blogpage {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
