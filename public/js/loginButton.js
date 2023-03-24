@@ -9,3 +9,10 @@ document.querySelector("#signup").addEventListener("click", () => {
 document.querySelector("#home").addEventListener("click", () => {
   document.location.replace("/");
 });
+
+document.querySelector("#blog").addEventListener("click", () => {
+  document.location.replace("/blog");
+});
+document.querySelector("#dashboard").addEventListener("click", () => {
+  document.location.replace("/login");
+});
