@@ -68,11 +68,21 @@ router.get("/all-events", async (req, res) => {
 
 // Login GET "/login"
 router.get("/login", async (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
   res.render("login");
 });
 
 // Sign Up GET "/sign-up"
 router.get("/sign-up", async (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
   res.render("signup");
 });
 
