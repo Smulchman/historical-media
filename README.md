@@ -4,7 +4,7 @@
 
 ## Description
 
-The purpose of this application was to create a social media that uses historical events on the current day. Think of it like Twitter but with history! So when you load into the site, you will see a list of events that occur on that day and some posts that other users have made about an event that occured. We built this project to have a fun and unique take on a social media site that users can view different and interesting historical events each day, can view others' posts that may give them more insight and knowledge on the event, and can click on a event to create a post about said event themselves. This project was made with express, node.js, sequelize, handlebars, and mysql as well as scheduler and mysql2. The application is also being deployed on Heroku.
+The purpose of this application was to create a social media that uses historical events on the current day. Think of it like Twitter but with history! So when you load into the site, you will see a list of events that occur on that day and some posts that other users have made about an event that occured. We built this project to have a fun and unique take on a social media site that users can view different and interesting historical events each day, can view others' posts that may give them more insight and knowledge on the event, and can click on a event to create a post about said event themselves. This project was made with express, node.js, sequelize, handlebars, and mysql as well as mysql2 and a scheduler in the form of node-cron. The application is also being deployed on Heroku.
 
 ## Table of Contents
 
@@ -34,21 +34,21 @@ This application license is: MIT
 
 ## Contribution
 
-Sam,
-Elvis,
-Jimmy,
-Laert,
-Jared
+Sam Mulcahy - https://github.com/Smulchman
+Elvis Diaz - https://github.com/Elvisdiaz1
+Jimmy Dai - https://github.com/Alien-oyi
+Laert Xhumari - https://github.com/LaertXh
+Jared Andreassi - https://github.com/jAndreassi
 
 ## Credits
 
-Express-
-Mysql-
-Sequelize-
-Node.js-
-Handlebars-
-Mysql2-
-Scheduler-
+Express - https://www.npmjs.com/package/express
+Mysql - https://www.npmjs.com/package/mysql
+Sequelize - https://www.npmjs.com/package/sequelize
+Node.js - https://nodejs.org/en
+Handlebars - https://www.npmjs.com/package/handlebars
+Mysql2 - https://www.npmjs.com/package/mysql2
+Node Cron - https://www.npmjs.com/package/node-cron
 
 ## Tests
 
@@ -56,5 +56,5 @@ none currently (may be subject to change)
 
 ## Questions
 
-The GitHub used to host the files of this application is (INSERT SAM GITHUB)
+The GitHub used to host the files of this application is Smulchman.
 If you have any questions, please contact us on the GitHub. We will reach back to you as soon as possible
