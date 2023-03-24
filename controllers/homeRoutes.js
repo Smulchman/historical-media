@@ -89,8 +89,8 @@ router.get("/sign-up", async (req, res) => {
 });
 
 // Event Get "/event"
-router.get("/404", async (req, res) => {
-  res.render("404");
+router.get("/event", async (req, res) => {
+  res.render("event");
 });
 
 // Blog Get "/blog"
@@ -103,9 +103,18 @@ router.get("/blog", withAuth, async (req, res) => {
   res.render("login");
 });
 
-// Blog UserDash "/blog"
+// Blog UserDash "/userDash"
 router.get("/userDash", async (req, res) => {
   res.render("userDash");
+});
+
+// Blog extrainfo "/extrainfo"
+router.get("/extrainfo", async (req, res) => {
+  res.render("extrainfo");
+});
+
+router.get("/404", async (req, res) => {
+  res.render("404");
 });
 
 module.exports = router;
