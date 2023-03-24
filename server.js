@@ -36,6 +36,10 @@ app.use(routes);
 
 scheduler();
 
+app.get("*", (req, res) => {
+  res.render("404");
+});
+
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
