@@ -24,7 +24,7 @@ Event.init(
     },
     // year of event
     year: {
-      type: DataTypes.STRING(4),
+      type: DataTypes.STRING(7),
       allowNull: false,
     },
     // this actually has the simple rundown of the event in question

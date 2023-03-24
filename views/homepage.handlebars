@@ -13,8 +13,14 @@
     {{/each}}
     
 </div>
-<div class="text-center" id="viewevent"><button type="button" class="btn btn-outline-success">View all the day events!</button></div>
-  <div class="container" id="recentblogposts">
+<div class="container text-center" id="viewbutton"><button type="button" class="btn btn-outline-success">View all the day events!</button></div>
+  
+  <div class="container" id="main">
+    {{#each recBlogs as |blog|}}
+    {{> recentblogpartial blog}}
+    {{/each}}
+  </div>
+  {{!-- <div class="container" id="recentblogposts">
     <div class="container" id="recentposts">
   <div class="card">
     <div class="card-header" id="username">
@@ -28,6 +34,6 @@
     </div>
   </div>
   </div>
-</div>
+</div> --}}
 
 

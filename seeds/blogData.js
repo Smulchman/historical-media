@@ -7,8 +7,14 @@ const blogData = [
     It's one of countless examples of African-American men not being extended the same legal treatment as white citizens. Palmer's sentencing was so unremarkable at the time that, frankly, it would not surprise this author if Palmer was not guilty of murder at all.
 
     Additionally, this event shows the discontent of the labor class bubbling up in the post industrial-revolution world. The individual that was murdered was Mr. Berner's boss. It gives us a taste of the momentum the labor movement was gathering, and a prelude to the ideological turns that would come in the early 20th century.`,
-    event_id: "13",
-    user_id: "2",
+    event_id: 15,
+    user_id: 2,
+  },
+  {
+    title: 'The Labor Movement as a Burgeoning Dam',
+    content: `These riots were born from the discontent of the working class (in more ways than one). In the early stages of the labor movement, there was a growing sense of pressure building up among workers who had long been exploited and mistreated by their employers. Like a dam that has been slowly filling with water, this pressure eventually reached a breaking point, and the labor movement burst forth with incredible force. Just as a burst dam can unleash a torrent of water that can reshape the landscape, the labor movement had a profound impact on the social and economic landscape of the United States and other countries. It brought about major changes in labor laws and regulations, helped to establish workers' rights and protections, and paved the way for the creation of labor unions that continue to fight for fair wages and working conditions to this day. While the early stages of the labor movement were undoubtedly tumultuous and at times violent, they ultimately represented a powerful and necessary force for change in a world that was deeply unequal and unjust.`,
+    event_id: 15,
+    user_id: 6,
   },
   {
     title: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit',
@@ -21,8 +27,8 @@ const blogData = [
     Suspendisse eget augue vehicula, rutrum arcu a, feugiat turpis. Curabitur ullamcorper, libero sit amet imperdiet pellentesque, enim odio malesuada tellus, lobortis gravida purus turpis vitae mi. Sed odio risus, ullamcorper ut iaculis ac, convallis at quam. Proin mi urna, auctor nec condimentum ut, fringilla et justo. Sed in pellentesque urna, non pretium ipsum. Aliquam erat volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum in mi odio. Ut fringilla pharetra hendrerit. Etiam eu libero orci. Vestibulum vel nunc iaculis, porta ex non, rutrum lacus. Vestibulum sed turpis tincidunt augue sagittis volutpat vitae nec massa. Mauris pellentesque efficitur purus vitae mollis. Fusce quis ipsum est. Integer nisi ipsum, euismod nec odio quis, eleifend pulvinar odio.
     
     Suspendisse blandit est eros. Maecenas egestas dolor vel sem imperdiet, a imperdiet augue mattis. Proin ultricies quam eu ligula laoreet, quis vulputate nisi consequat. Quisque a risus scelerisque, dictum magna fringilla, viverra purus. Nulla id diam odio. Proin porta ex turpis, non euismod justo gravida sodales. Aenean aliquam ligula vel nunc mollis, sit amet aliquet lorem interdum. Suspendisse aliquam orci diam, a facilisis nibh fermentum eu. Maecenas metus quam, bibendum vitae quam eu, mattis vehicula lectus. Nullam consequat mi id sodales pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tempor libero sit amet nisl volutpat, vel faucibus nisl aliquam.`,
-    event_id: "3",
-    user_id: "4",
+    event_id: 5,
+    user_id: 4,
   },
   {
     title: 'Lorem Ipsum Viginti tres',
@@ -35,8 +41,8 @@ const blogData = [
     Quisque mauris urna, aliquet vel dolor a, semper lacinia est. Morbi ac orci et libero mattis imperdiet non congue orci. Nunc a feugiat erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent odio augue, accumsan eget tortor nec, elementum efficitur tortor. Nam placerat est tempus nisi varius, eget faucibus erat mollis. Cras dignissim tempus purus. In congue sollicitudin metus finibus consequat. Proin tincidunt, quam vel vehicula euismod, ex justo laoreet dolor, ut finibus ex lorem ut massa. Aenean convallis vestibulum pellentesque. Nunc sollicitudin, sem eget posuere pellentesque, risus nibh fringilla leo, aliquet rutrum eros nisi id est. Phasellus eget magna eu odio fermentum bibendum. Fusce et ullamcorper urna. Aliquam erat volutpat. Nulla et aliquet risus. Fusce semper venenatis ullamcorper.
     
     Vestibulum iaculis porttitor nulla, sit amet varius mauris sagittis at. Ut blandit vehicula turpis, vel hendrerit urna vulputate eget. Aliquam dignissim molestie magna, non porttitor elit. Duis at nisi ultrices, mattis ipsum maximus, pellentesque est. Praesent mattis dapibus gravida. Maecenas sit amet justo diam. Nunc et nunc vel risus accumsan accumsan. Donec id lorem fringilla, bibendum mi ut, iaculis quam. Duis auctor vitae risus dignissim laoreet. Cras efficitur fringilla elit sit amet ultrices.`,
-    event_id: "13",
-    user_id: "2",
+    event_id: 13,
+    user_id: 2,
   },
   {
     title: 'ChatGPT on the Pope & Venice',
@@ -49,21 +55,33 @@ const blogData = [
     Moreover, the decree had significant political implications for Venice. By cutting off the city from the Catholic Church, the papacy was able to weaken Venice's position as a powerful city-state. This was particularly important because Venice was a major player in the politics of Italy and Europe at the time. The excommunication and interdiction also had implications for the power dynamics between the papacy and other secular authorities in Italy and Europe.
     
     In conclusion, Pope Clement V's excommunication and interdiction of Venice were significant events that had far-reaching consequences for the city and its people. While the decree had immediate economic and religious consequences for Venice, it also revealed larger tensions between the papacy and secular authorities during the early modern period. Ultimately, the decree reflected the ongoing struggle between the papacy and secular authorities in Europe over who had ultimate authority over the Catholic Church.`,
-    event_id: "1",
-    user_id: "6",
+    event_id: 3,
+    user_id: 6,
   },
   {
     title: "I Interviewed an English Goblin about Charles Watson-Wentworth. Here's What They Had to Say!",
     content: `Felthog balthag nygrom zyrgoth. Balthag grothnyg zyrgoth shalnag krygloth. Nygrom shalnag grothnyg felthog krygloth. Zorgoth krygloth balthag shalnag felthog. Grothnyg zyrgoth nygrom balthag krygloth.
     Nargoth zyrgoth balthag grothnyg! Krygloth shalnag felthog! Nygrom zorgoth shalnag krygloth! Felthog grothnyg balthag nygrom! Shalnag zyrgoth krygloth balthag!`,
-    event_id: "5",
-    user_id: "2",
+    event_id: 7,
+    user_id: 2,
   },
   {
     title: 'Andrew Johnson was Always a Terrible Pick for Lincolns VP',
     content: `It's pretty remarkable that congress managed to overturn the veto. I guess that's at least one thing reconstruction got right, before it all fell to pieces.`,
-    event_id: "8",
-    user_id: "5",
+    event_id: 13,
+    user_id: 2,
+  },
+  {
+    title: 'The Sacking of Troy',
+    content: `Sing to me, O Muse, of the great sacking of Troy, that fateful day when the city fell and the once-great walls were reduced to rubble. The Trojan War, that long and bitter struggle between the Achaean forces and the proud defenders of Troy, had raged on for years with no end in sight. But on that day, the Achaeans, led by the cunning Odysseus and the mighty Achilles, breached the walls and poured into the city, sword in hand. The streets were awash with blood, as the Trojans fought with desperate courage to defend their homes and families. But in the end, the Achaean forces proved too powerful, and Troy fell to their relentless assault. And so it was that the great city of Priam, once so mighty and proud, lay in ruins, a testament to the terrible cost of war.`,
+    event_id: 44,
+    user_id: 1,
+  },
+  {
+    title: 'My Cursed Birthday',
+    content: `Perhaps this is something that everyone has (since history is lined with millions of corpses) but my birthday has some really brutal events associated with it. Thich Quang Duc self immolated. Henry VII married Catherine of Aragon, and, in addition to many others, Troy was sacked.`,
+    event_id: 44,
+    user_id: 5,
   },
 ];
 

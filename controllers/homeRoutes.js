@@ -23,6 +23,8 @@ router.get("/", async (req, res) => {
     order: [["id", "DESC"]],
   });
   recBlogs = recBlogs.map((post) => post.get({ plain: true }));
+  console.log(recBlogs);
+  console.log(randList);
 
   //console.log(randList);
   res.render("homepage", {
@@ -94,6 +96,11 @@ router.get("/event", async (req, res) => {
 // Blog Get "/blog"
 router.get("/blog", async (req, res) => {
   res.render("blog");
+});
+
+// Blog UserDash "/blog"
+router.get("/userDash", async (req, res) => {
+  res.render("userDash");
 });
 
 module.exports = router;

@@ -1,9 +1,48 @@
 const { Event } = require("../models")
 
 const eventData = [
+  {
+    // 1
+    month: 2,
+    day: 26,
+    year: "1914",
+    description: "HMHS Britannic, sister to the RMS Titanic, is launched at Harland and Wolff shipyard in Belfast.",
+    wikipedia: [
+      {
+        title: "HMHS Britannic",
+        wikipedia: "https://wikipedia.org/wiki/HMHS_Britannic"
+      },
+      {
+        title: "RMS Titanic",
+        wikipedia: "https://wikipedia.org/wiki/RMS_Titanic"
+      },
+      {
+        title: "Harland and Wolff",
+        wikipedia: "https://wikipedia.org/wiki/Harland_and_Wolff"
+      },
+      {
+        title: "Belfast",
+        wikipedia: "https://wikipedia.org/wiki/Belfast"
+      }
+    ]
+  },
+  {
+    // 2
+    month: 2,
+    day: 29,
+    year: "1964",
+    description: "In Sydney, Australian swimmer Dawn Fraser sets a new world record in the 100-meter freestyle swimming competition (58.9 seconds).",
+    wikipedia: [
+      {
+        title: "Dawn Fraser",
+        wikipedia: "https://wikipedia.org/wiki/Dawn_Fraser"
+      }
+    ]
+  },
     {
-      day: 3,
-      month: 27,
+      // 3
+      month: 3,
+      day: 27,
       year: "1309",
       description: "Pope Clement V imposes excommunication and interdiction on Venice, and a general prohibition of all commercial intercourse with Venice, which had seized on Ferrara, a papal fiefdom.",
       wikipedia: [
@@ -14,8 +53,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 4
+      month: 3,
+      day: 27,
       year: "1329",
       description: "Pope John XXII issues his In Agro Dominico condemning some writings of Meister Eckhart as heretical.",
       wikipedia: [
@@ -30,8 +70,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 5
+      month: 3,
+      day: 27,
       year: "1513",
       description: "Spanish explorer Juan Ponce de León reaches the northern end of The Bahamas on his first voyage to Florida.",
       wikipedia: [
@@ -46,8 +87,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 6
+      month: 3,
+      day: 27,
       year: "1625",
       description: "Charles I becomes King of England, Scotland and Ireland as well as claiming the title King of France.",
       wikipedia: [
@@ -62,8 +104,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 7
+      month: 3,
+      day: 27,
       year: "1782",
       description: "Charles Watson-Wentworth, 2nd Marquess of Rockingham becomes Prime Minister of the United Kingdom.",
       wikipedia: [
@@ -78,8 +121,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 8
+      month: 3,
+      day: 27,
       year: "1794",
       description: "The United States Government establishes a permanent navy and authorizes the building of six frigates.",
       wikipedia: [
@@ -98,8 +142,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 9
+      month: 3,
+      day: 27,
       year: "1794",
       description: "Denmark and Sweden form a neutrality compact.",
       wikipedia: [
@@ -110,8 +155,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 10
+      month: 3,
+      day: 27,
       year: "1809",
       description: "Peninsular War: A combined Franco-Polish force defeats the Spanish in the Battle of Ciudad Real.",
       wikipedia: [
@@ -134,8 +180,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 11
+      month: 3,
+      day: 27,
       year: "1814",
       description: "War of 1812: In central Alabama, U.S. forces under General Andrew Jackson defeat the Creek at the Battle of Horseshoe Bend.",
       wikipedia: [
@@ -162,8 +209,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 12
+      month: 3,
+      day: 27,
       year: "1836",
       description: "Texas Revolution: On the orders of General Antonio López de Santa Anna, the Mexican army massacres 342 Texas POWs at Goliad, Texas.",
       wikipedia: [
@@ -186,8 +234,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 13
+      month: 3,
+      day: 27,
       year: "1866",
       description: "President Andrew Johnson vetoes the Civil Rights Act of 1866. His veto is overridden by Congress and the bill passes into law on April 9.",
       wikipedia: [
@@ -202,8 +251,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 14
+      month: 3,
+      day: 27,
       year: "1871",
       description: "The first international rugby football match, when Scotland defeats England in Edinburgh at Raeburn Place.",
       wikipedia: [
@@ -234,10 +284,11 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 15
+      month: 3,
+      day: 27,
       year: "1884",
-      description: "A mob in Cincinnati, Ohio, attacks members of a jury which had returned a verdict of manslaughter in what was seen as a clear case of murder; over the next few days the mob would riot and eventually destroy the courthouse.",
+      description: "A mob in Cincinnati, Ohio, attacks members of a jury which had returned a verdict of manslaughter in what was seen as a clear case of murder; over the next few months the mob would riot and eventually destroy the courthouse.",
       wikipedia: [
         {
           title: "Cincinnati, Ohio",
@@ -258,8 +309,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 16
+      month: 3,
+      day: 27,
       year: "1886",
       description: "Geronimo, Apache warrior, surrenders to the U.S. Army, ending the main phase of the Apache Wars.",
       wikipedia: [
@@ -278,8 +330,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 17
+      month: 3,
+      day: 27,
       year: "1899",
       description: "Emilio Aguinaldo leads Filipino forces for the only time during the Philippine-American War at the Battle of Marilao River.",
       wikipedia: [
@@ -302,8 +355,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 18
+      month: 3,
+      day: 27,
       year: "1915",
       description: "Typhoid Mary, the first healthy carrier of disease ever identified in the United States, is put in quarantine, where she would remain for the rest of her life.",
       wikipedia: [
@@ -322,8 +376,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 19
+      month: 3,
+      day: 27,
       year: "1938",
       description: "Second Sino-Japanese War: The Battle of Taierzhuang begins, resulting several weeks later in the war's first major Chinese victory over Japan.",
       wikipedia: [
@@ -338,8 +393,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 20
+      month: 3,
+      day: 27,
       year: "1941",
       description: "World War II: Yugoslavian Air Force officers topple the pro-Axis government in a bloodless coup.",
       wikipedia: [
@@ -362,8 +418,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 21
+      month: 3,
+      day: 27,
       year: "1943",
       description: "World War II: Battle of the Komandorski Islands: In the Aleutian Islands the battle begins when United States Navy forces intercept Japanese attempting to reinforce a garrison at Kiska.",
       wikipedia: [
@@ -386,8 +443,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 22
+      month: 3,
+      day: 27,
       year: "1945",
       description: "World War II: Operation Starvation, the aerial mining of Japan's ports and waterways begins. Argentina declares war on the Axis Powers.",
       wikipedia: [
@@ -402,8 +460,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 23
+      month: 3,
+      day: 27,
       year: "1958",
       description: "Nikita Khrushchev becomes Chairman of the Council of Ministers of the Soviet Union",
       wikipedia: [
@@ -422,10 +481,11 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 24
+      month: 3,
+      day: 27,
       year: "1964",
-      description: "The Good Friday earthquake, the most powerful earthquake recorded in North American history at a magnitude of 9.2 strikes Southcentral Alaska, killing 125 people and inflicting massive damage to the city of Anchorage.",
+      description: "The Good Frimonth earthquake, the most powerful earthquake recorded in North American history at a magnitude of 9.2 strikes Southcentral Alaska, killing 125 people and inflicting massive damage to the city of Anchorage.",
       wikipedia: [
         {
           title: "1964 Alaska earthquake",
@@ -450,8 +510,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 25
+      month: 3,
+      day: 27,
       year: "1975",
       description: "Construction of the Trans-Alaska Pipeline System begins.",
       wikipedia: [
@@ -462,8 +523,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 26
+      month: 3,
+      day: 27,
       year: "1977",
       description: "Tenerife airport disaster: Two Boeing 747 airliners collide on a foggy runway on Tenerife in the Canary Islands, killing 583 (all 248 on KLM and 335 on Pan Am). Sixty-one survived on the Pan Am flight. This is the worst aviation accident in history.",
       wikipedia: [
@@ -498,8 +560,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 27
+      month: 3,
+      day: 27,
       year: "1980",
       description: "The Norwegian oil platform Alexander L. Kielland collapses in the North Sea, killing 123 of its crew of 212.",
       wikipedia: [
@@ -514,14 +577,15 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 28
+      month: 3,
+      day: 27,
       year: "1980",
-      description: "Silver Thursday: A steep fall in silver prices, resulting from the Hunt Brothers attempting to corner the market in silver, leads to panic on commodity and futures exchanges.",
+      description: "Silver Thursmonth: A steep fall in silver prices, resulting from the Hunt Brothers attempting to corner the market in silver, leads to panic on commodity and futures exchanges.",
       wikipedia: [
         {
-          title: "Silver Thursday",
-          wikipedia: "https://wikipedia.org/wiki/Silver_Thursday"
+          title: "Silver Thursmonth",
+          wikipedia: "https://wikipedia.org/wiki/Silver_Thursmonth"
         },
         {
           title: "Silver",
@@ -542,8 +606,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 29
+      month: 3,
+      day: 27,
       year: "1981",
       description: "The Solidarity movement in Poland stages a warning strike, in which at least 12 million Poles walk off their jobs for four hours.",
       wikipedia: [
@@ -558,8 +623,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 30
+      month: 3,
+      day: 27,
       year: "1986",
       description: "A car bomb explodes outside Russell Street Police HQ in Melbourne, Australia, killing one police officer and injuring 21 people.",
       wikipedia: [
@@ -582,8 +648,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 31
+      month: 3,
+      day: 27,
       year: "1990",
       description: "The United States begins broadcasting TV Martí, an anti-Castro propaganda network, to Cuba.",
       wikipedia: [
@@ -602,8 +669,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 32
+      month: 3,
+      day: 27,
       year: "1993",
       description: "Jiang Zemin is appointed President of the People's Republic of China.",
       wikipedia: [
@@ -618,8 +686,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 33
+      month: 3,
+      day: 27,
       year: "1993",
       description: "Italian former minister and Christian Democracy leader Giulio Andreotti is accused of mafia allegiance by the tribunal of Palermo.",
       wikipedia: [
@@ -642,8 +711,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 34
+      month: 3,
+      day: 27,
       year: "1998",
       description: "The Food and Drug Administration approves Viagra for use as a treatment for male impotence, the first pill to be approved for this condition in the United States.",
       wikipedia: [
@@ -662,8 +732,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 35
+      month: 3,
+      day: 27,
       year: "1999",
       description: "Kosovo War: An American Lockheed F-117A Nighthawk is shot down by a Yugoslav SAM, the first and only Nighthawk to be lost in combat.",
       wikipedia: [
@@ -682,8 +753,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 36
+      month: 3,
+      day: 27,
       year: "2000",
       description: "A Phillips Petroleum plant explosion in Pasadena, Texas kills one person and injures 71 others.",
       wikipedia: [
@@ -698,8 +770,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 37
+      month: 3,
+      day: 27,
       year: "2002",
       description: "Passover massacre: A Palestinian suicide bomber kills 29 people at a Passover seder in Netanya, Israel.",
       wikipedia: [
@@ -726,8 +799,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 38
+      month: 3,
+      day: 27,
       year: "2002",
       description: "Nanterre massacre: In Nanterre, France, a gunman opens fire at the end of a town council meeting, resulting in the deaths of eight councilors; 19 other people are injured.",
       wikipedia: [
@@ -742,8 +816,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 39
+      month: 3,
+      day: 27,
       year: "2004",
       description: "HMS Scylla, a decommissioned Leander-class frigate, is sunk as an artificial reef off Cornwall, the first of its kind in Europe.",
       wikipedia: [
@@ -762,8 +837,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 40
+      month: 3,
+      day: 27,
       year: "2009",
       description: "The dam forming Situ Gintung, an artificial lake in Indonesia, fails, killing at least 99 people.",
       wikipedia: [
@@ -778,8 +854,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 41
+      month: 3,
+      day: 27,
       year: "2014",
       description: "Philippines signs a peace accord with the largest Muslim rebel group, the Moro Islamic Liberation Front, ending decades of conflict.",
       wikipedia: [
@@ -802,8 +879,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 42
+      month: 3,
+      day: 27,
       year: "2015",
       description: "Al-Shabab militants attack and temporarily occupy a Mogadishu hotel leaving at least 20 people dead.",
       wikipedia: [
@@ -822,8 +900,9 @@ const eventData = [
       ]
     },
     {
-      day: 3,
-      month: 27,
+      // 43
+      month: 3,
+      day: 27,
       year: "2016",
       description: "A suicide blast in Gulshan-e-Iqbal Park, Lahore claims over 70 lives and leaves almost 300 others injured. The target of the bombing are Christians celebrating Easter.",
       wikipedia: [
@@ -848,7 +927,83 @@ const eventData = [
           wikipedia: "https://wikipedia.org/wiki/Easter"
         }
       ]
-    }
+    },
+    {
+      // 44
+      month: 6,
+      day: 11,
+      // the year in this event is supposed to be 1184 bc
+      year: "1184 BC",
+      description: "Trojan War: Troy is sacked and burned, according to calculations by Eratosthenes.",
+      wikipedia: [
+        {
+          title: "Trojan War",
+          wikipedia: "https://wikipedia.org/wiki/Trojan_War"
+        },
+        {
+          title: "Troy",
+          wikipedia: "https://wikipedia.org/wiki/Troy"
+        },
+        {
+          title: "Eratosthenes",
+          wikipedia: "https://wikipedia.org/wiki/Eratosthenes"
+        }
+      ]
+    },
+    {
+      // 45
+      month: 6,
+      day: 11,
+      year: "1776",
+      description: "The Continental Congress appoints Thomas Jefferson, John Adams, Benjamin Franklin, Roger Sherman, and Robert R. Livingston to the Committee of Five to draft a declaration of independence.",
+      wikipedia: [
+        {
+          title: "Continental Congress",
+          wikipedia: "https://wikipedia.org/wiki/Continental_Congress"
+        },
+        {
+          title: "Thomas Jefferson",
+          wikipedia: "https://wikipedia.org/wiki/Thomas_Jefferson"
+        },
+        {
+          title: "John Adams",
+          wikipedia: "https://wikipedia.org/wiki/John_Adams"
+        },
+        {
+          title: "Benjamin Franklin",
+          wikipedia: "https://wikipedia.org/wiki/Benjamin_Franklin"
+        },
+        {
+          title: "Roger Sherman",
+          wikipedia: "https://wikipedia.org/wiki/Roger_Sherman"
+        },
+        {
+          title: "Robert R. Livingston (chancellor)",
+          wikipedia: "https://wikipedia.org/wiki/Robert_R._Livingston_(chancellor)"
+        },
+        {
+          title: "Committee of Five",
+          wikipedia: "https://wikipedia.org/wiki/Committee_of_Five"
+        },
+        {
+          title: "United States Declaration of Independence",
+          wikipedia: "https://wikipedia.org/wiki/United_States_Declaration_of_Independence"
+        }
+      ]
+    },
+    {
+      // 46
+      month: 6,
+      day: 11,
+      year: "1895",
+      description: 'Paris-Bordeaux-Paris, sometimes called the first automobile race in history or the "first motor race", takes place.',
+      wikipedia: [
+        {
+          title: "Paris-Bordeaux-Paris",
+          wikipedia: "https://wikipedia.org/wiki/Paris%E2%80%93Bordeaux%E2%80%93Paris"
+        }
+      ]
+    },
   ];
 
   const seedEvents = () => Event.bulkCreate(eventData);
