@@ -35,12 +35,13 @@ router.get("/", async (req, res) => {
 // get all the blogs of this user GET("api/blog/dashboard")
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
-    const userBlogs = await Blog.findAll({
+    let userBlogs = await Blog.findAll({
       where: {
         user_id: req.session.user_id,
       },
     });
-    res.status(200).json(userBlogs);
+    userBlogs = userBlogs.map((post) => post.get({ plain: true }));
+    res.render("userDash", { userBlogs, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

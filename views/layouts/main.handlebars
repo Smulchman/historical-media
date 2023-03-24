@@ -9,8 +9,9 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <title>The Historical Manias</title>
+    <title>HistorWe Home</title>
   </head>
 
   <body>
@@ -21,6 +22,7 @@
       >
         <div class="container-fluid">
           <a class="navbar-brand" id="home" href="#">Home</a>
+          <div class="logo"></div>
           <button
             class="navbar-toggler"
             type="button"
@@ -39,13 +41,14 @@
                   class="nav-link active"
                   aria-current="page"
                   href="#"
+                  id="dashboard"
                 >Dashboard</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
               </li>
             </ul>
-            <div class="d-flex" role="login">\
+            <div class="d-flex" role="login">
               {{#if loggedIn}}
                 <button
                   type="button"
