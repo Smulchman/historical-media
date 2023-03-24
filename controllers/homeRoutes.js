@@ -98,9 +98,11 @@ router.get("/blog", withAuth, async (req, res) => {
   if (req.session.loggedIn) {
     res.render("blog");
     return;
-  }
+  } else res.render("login");
 
-  res.render("login");
+  if (req.session.event_id) {
+    res.redirect("/blog");
+  }
 });
 
 // Blog UserDash "/userDash"

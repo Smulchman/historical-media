@@ -11,6 +11,9 @@ router.post("/", withAuth, async (req, res) => {
       event_id: req.body.event_id,
       user_id: req.session.user_id,
     });
+    req.session.save(() => {
+      req.session.event_id = event_id;
+    });
     res.status(200).json(dbBlogData);
   } catch (err) {
     console.log(err);
