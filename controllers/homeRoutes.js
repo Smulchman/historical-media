@@ -46,7 +46,7 @@ router.get("/all-events", async (req, res) => {
 
   const posts = postData.map((post) => post.get({ plain: true }));
 
-  //res.render("handlebar-name", { posts });
+  res.render("event", { posts });
 });
 
 // Dashboard/User profile GET "/user-profile/:id"
