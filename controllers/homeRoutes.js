@@ -1,4 +1,4 @@
-const { Event } = require("../models");
+const { Event, Blog } = require("../models");
 const withAuth = require("../utils/auth");
 const { getRandElements } = require("../utils/helpers");
 
@@ -18,31 +18,30 @@ router.get("/", async (req, res) => {
   const posts = postData.map((post) => post.get({ plain: true }));
   const randList = getRandElements(posts, 10);
 
-  const recBlogs = await Blog.findAll({
+  let recBlogs = await Blog.findAll({
     limit: 5, // retrieve only the top 5 rows
     order: [["id", "DESC"]],
   });
   recBlogs = recBlogs.map((post) => post.get({ plain: true }));
 
-  console.log(randList);
+  //console.log(randList);
   res.render("homepage", { randList, recBlogs });
 });
 
-// router.get("/all-events", async (req, res) => {
-// const month = new Date().getMonth() + 1;
-// const day = new Date().getDate();
-//   const postData = await MODEL.findAll({
-//   where: {
-//     day: day,
-//     month: month
-//   }
-//  });
+router.get("/all-events", async (req, res) => {
+  const month = new Date().getMonth() + 1;
+  const day = new Date().getDate();
+  const postData = await Event.findAll({
+    where: {
+      day: day,
+      month: month,
+    },
+  });
 
-//   const posts = postData.map((post) => post.get({ plain: true }));
+  const posts = postData.map((post) => post.get({ plain: true }));
 
-//   console.log(posts);
-//   res.render("home", { posts });
-// });
+  //res.render("handlebar-name", { posts });
+});
 
 // Dashboard/User profile GET "/user-profile/:id"
 router.get("/user-profile/:id", withAuth, async (req, res) => {
