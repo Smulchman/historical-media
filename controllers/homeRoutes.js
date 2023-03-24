@@ -94,13 +94,8 @@ router.get("/event", async (req, res) => {
 });
 
 // Blog Get "/blog"
-router.get("/blog", withAuth, async (req, res) => {
-  if (req.session.loggedIn) {
-    res.render("blog");
-    return;
-  }
-
-  res.render("login");
+router.get("/blog/:id", withAuth, async (req, res) => {
+  res.render("blog");
 });
 
 // Blog UserDash "/userDash"
