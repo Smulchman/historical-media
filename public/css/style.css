@@ -89,3 +89,8 @@ body {
   font-size: 1.7rem;
   text-align: center;
 }
+
+#rotate.container-fluid {
+  padding-left: 0%;
+  padding-right: 0%;
+}
