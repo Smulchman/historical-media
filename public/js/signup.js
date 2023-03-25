@@ -1,6 +1,24 @@
+//import { animateEmptyFields } from "../utils/helpers";
+const animateEmptyFields = (email, emailEl) => {
+  if (!email) {
+    emailEl.classList.add("red-border", "shake-animation");
+    setTimeout(() => {
+      emailEl.classList.remove("shake-animation");
+    }, 500);
+    emailEl.addEventListener("input", () => {
+      if (emailEl.value !== "") {
+        emailEl.classList.remove("red-border", "shake-animation");
+      }
+    });
+  }
+};
+
 const signupFormHandler = async (event) => {
   event.preventDefault();
-  console.log("Connected");
+
+  const usernameEl = document.querySelector("#username-signup1");
+  const emailEl = document.querySelector("#exampleInputEmail1");
+  const passwordEl = document.querySelector("#exampleInputPassword1");
 
   const username = document.querySelector("#username-signup1").value.trim();
   const email = document.querySelector("#exampleInputEmail1").value.trim();
@@ -20,6 +38,10 @@ const signupFormHandler = async (event) => {
     } else {
       alert("Failed to sign up.");
     }
+  } else {
+    animateEmptyFields(username, usernameEl);
+    animateEmptyFields(email, emailEl);
+    animateEmptyFields(password, passwordEl);
   }
 };
 

@@ -1,6 +1,8 @@
 const cron = require("node-cron");
 const { Event, Blog, User } = require("../models");
 const fetch = require("node-fetch");
+const sequelize = require("../config/connection");
+const { Op } = require("sequelize");
 
 function scheduler() {
   cron.schedule("0 0 0 * * *", async () => {
@@ -14,12 +16,12 @@ function scheduler() {
         required: true, // only return rows that have blogs written about them
       },
     })
-      .then((results) => {
+      .then(async (results) => {
         const idsToSave = results.map((row) => row.id);
-        return ModelA.destroy({
+        return await Event.destroy({
           where: {
             id: {
-              [Sequelize.Op.notIn]: idsToSave, // only delete rows that do not have blogs written about them
+              [Op.notIn]: idsToSave, // only delete rows that do not have blogs written about them
             },
           },
         });
@@ -55,20 +57,7 @@ function scheduler() {
                 description: data.events[i].description,
                 wikipedia: data.events[i].wikipedia,
               },
-            })
-              .then(([event, created]) => {
-                if (created) {
-                  console.log("New event created:", event.get({ plain: true }));
-                } else {
-                  console.log(
-                    "Event already exists:",
-                    event.get({ plain: true })
-                  );
-                }
-              })
-              .catch((err) => {
-                console.error("Error creating event:", err);
-              });
+            });
         }
       })
       .catch((error) => {

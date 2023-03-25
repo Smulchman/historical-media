@@ -1,5 +1,9 @@
-<div class="container" id="dashbody" >
-    {{#each userBlogs as |event|}}
-    {{> parti-dash event}}
-    {{/each}}   
+<div class="container" >
+    {{#if userBlogs}}
+        {{#each userBlogs as |event|}}
+            {{> parti-dash event}}
+        {{/each}}
+    {{else}}
+        <p id="no-blogs">No Blogs Published</p>
+    {{/if}}
 </div>

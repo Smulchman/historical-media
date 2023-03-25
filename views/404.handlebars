@@ -1,1 +1,8 @@
-
+<div class="container-fluid not-found">
+  <img src="/assets/404.png" alt="404 image" width="400" height="400" />
+  {{#if badEventId}}
+    <h1>That Event Doesn't Exist</h1>
+  {{else}}
+    <h1>404 Not Found</h1>
+  {{/if}}
+</div>

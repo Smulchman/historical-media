@@ -1,4 +1,4 @@
-const { Event, Blog } = require("../models");
+const { Event, Blog, User } = require("../models");
 const withAuth = require("../utils/auth");
 const { getRandElements } = require("../utils/helpers");
 
@@ -21,11 +21,19 @@ router.get("/", async (req, res) => {
   let recBlogs = await Blog.findAll({
     limit: 5, // retrieve only the top 5 rows
     order: [["id", "DESC"]],
+    include: [
+      {
+        model: User,
+        required: true,
+        attributes: { exclude: ["password"] },
+      },
+      {
+        model: Event,
+        required: true,
+      },
+    ],
   });
   recBlogs = recBlogs.map((post) => post.get({ plain: true }));
-  console.log(recBlogs);
-  console.log(randList);
-
   //console.log(randList);
   res.render("homepage", {
     randList,
@@ -46,7 +54,7 @@ router.get("/all-events", async (req, res) => {
 
   const posts = postData.map((post) => post.get({ plain: true }));
 
-  //res.render("handlebar-name", { posts });
+  res.render("event", { posts, loggedIn: req.session.loggedIn });
 });
 
 // Dashboard/User profile GET "/user-profile/:id"
@@ -88,24 +96,52 @@ router.get("/sign-up", async (req, res) => {
   res.render("signup");
 });
 
-// Event Get "/event"
-router.get("/event", async (req, res) => {
-  res.render("event");
-});
-
-// Blog Get "/blog"
+// Blog Get "/blog/:id"
 router.get("/blog/:id", withAuth, async (req, res) => {
-  res.render("blog");
+  const ev = await Event.findOne({
+    where: {
+      id: req.params.id,
+    },
+  });
+  //if no event is available for that endpoint then go to a 404 page
+  const event = ev.get({ plain: true });
+  if (ev) {
+    req.session.event_id = req.params.id;
+    res.render("blog", { event, loggedIn: req.session.loggedIn });
+  } else {
+    res.render("404", { badEventId: true });
+  }
 });
 
-// Blog UserDash "/userDash"
-router.get("/userDash", async (req, res) => {
-  res.render("userDash");
-});
-
-// Blog extrainfo "/extrainfo"
-router.get("/extrainfo", async (req, res) => {
-  res.render("extrainfo");
+//will return the events info, blogs written about it with the author's info
+// GET (/event/:id)
+router.get("/event/:id", async (req, res) => {
+  const ev = await Event.findOne({
+    where: {
+      id: req.params.id,
+    },
+    include: [
+      {
+        model: Blog,
+        include: [
+          {
+            model: User,
+            required: true,
+            attributes: { exclude: ["password"] },
+          },
+        ],
+      },
+    ],
+  });
+  const event = ev.get({ plain: true });
+  console.log(event);
+  //if no event is available for that endpoint then go to a 404 page
+  if (ev) {
+    req.session.event_id = req.params.id;
+    res.render("extrainfo", { event, loggedIn: req.session.loggedIn });
+  } else {
+    res.render("404", { badEventId: true });
+  }
 });
 
 router.get("/404", async (req, res) => {

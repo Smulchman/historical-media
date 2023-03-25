@@ -8,10 +8,11 @@
           placeholder="Blog Post Name"
           aria-label="Blog Post Name"
           aria-describedby="button-addon2"
+          id="new-blog-title"
         />
         <button
-          class="btn btn-outline-secondary"
-          type="button"
+          type="click"
+          class="btn btn-outline-secondary post-button"
           id="button-addon2"
         >Post Blog</button>
       </div>
@@ -22,6 +23,7 @@
           style="height:10%"
           class="form-control"
           aria-label="With textarea"
+          id="new-description"
         ></textarea>
       </div>
       {{! <a href="#" class="card-link">Save Blog</a>
@@ -29,3 +31,5 @@
     </div>
   </div>
 </div>
+
+<script src="/js/post.js"></script>

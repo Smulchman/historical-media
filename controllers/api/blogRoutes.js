@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Blog } = require("../../models");
+const { Blog, User, Event } = require("../../models");
 const withAuth = require("../../utils/auth.js");
 
 // add a new blog POST("api/blog")
@@ -8,11 +8,8 @@ router.post("/", withAuth, async (req, res) => {
     const dbBlogData = await Blog.create({
       title: req.body.title,
       content: req.body.content,
-      event_id: req.body.event_id,
+      event_id: req.session.event_id,
       user_id: req.session.user_id,
-    });
-    req.session.save(() => {
-      req.session.event_id = event_id;
     });
     res.status(200).json(dbBlogData);
   } catch (err) {
@@ -21,7 +18,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-// get up to 5 most recent blogs GET("api/blog/dashboard")
+// get up to 5 most recent blogs GET("api/blog")
 router.get("/", async (req, res) => {
   try {
     const recBlogs = await Blog.findAll({
@@ -42,9 +39,25 @@ router.get("/dashboard", withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+      include: {
+        model: Event,
+        required: true,
+      },
+    });
+    let userInfo = await User.findOne({
+      where: {
+        id: req.session.user_id,
+      },
+      attributes: { exclude: ["password"] },
     });
     userBlogs = userBlogs.map((post) => post.get({ plain: true }));
-    res.render("userDash", { userBlogs, loggedIn: req.session.loggedIn });
+    userInfo = userInfo.get({ plain: true });
+    console.log(userBlogs);
+    res.render("userDash", {
+      userBlogs,
+      userInfo,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
