@@ -104,9 +104,10 @@ router.get("/blog/:id", withAuth, async (req, res) => {
     },
   });
   //if no event is available for that endpoint then go to a 404 page
+  const event = ev.get({ plain: true });
   if (ev) {
     req.session.event_id = req.params.id;
-    res.render("blog", { loggedIn: req.session.loggedIn });
+    res.render("blog", { event, loggedIn: req.session.loggedIn });
   } else {
     res.render("404", { badEventId: true });
   }
