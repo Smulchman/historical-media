@@ -8,12 +8,6 @@ document.querySelector("#dashboard").addEventListener("click", () => {
   document.location.replace("/api/blog/dashboard");
 });
 
-<<<<<<< HEAD
-document.querySelector("#events-page").addEventListener("click", () => {
-  console.log("sent");
-  document.location.replace("/all-events");
-});
-=======
 //view all button will send the user to a new page with all of today's events
 const viewAll = document.querySelectorAll(".view-all");
 for (let i = 0; i < viewAll.length; i++) {
@@ -21,4 +15,9 @@ for (let i = 0; i < viewAll.length; i++) {
     document.location.replace(`/all-events`);
   });
 }
->>>>>>> 4f8b63afa97ee547ac9ef3c9730da2859ead682c
+const viewMorePosts = document.querySelectorAll(".more-blogs");
+for (let i = 0; i < viewAll.length; i++) {
+  viewAll[i].addEventListener("click", () => {
+    document.location.replace(`/more-blogs`);
+  });
+}

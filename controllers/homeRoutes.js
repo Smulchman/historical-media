@@ -1,6 +1,7 @@
 const { Event, Blog, User } = require("../models");
 const withAuth = require("../utils/auth");
 const { getRandElements } = require("../utils/helpers");
+const sequelize = require("../config/connection");
 
 const router = require("express").Router();
 
