@@ -3,16 +3,35 @@ const { Blog, User, Event } = require("../../models");
 const withAuth = require("../../utils/auth.js");
 
 // add a new blog POST("api/blog")
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const dbBlogData = await Blog.create({
       title: req.body.title,
       content: req.body.content,
       event_id: req.session.event_id,
       user_id: req.session.user_id,
-      
     });
     res.status(200).json(dbBlogData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+// update blog PUT("api/blog")
+router.put("/:id", async (req, res) => {
+  try {
+    const updatedBlog = await Blog.update(
+      {
+        title: req.body.title,
+        content: req.body.content,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(updatedBlog);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

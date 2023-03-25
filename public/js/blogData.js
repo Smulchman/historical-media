@@ -17,12 +17,12 @@ for (let i = 0; i < eventLinks.length; i++) {
   });
 }
 
-const deleteButtons = document.querySelectorAll(".delete-button");
+const editButtons = document.querySelectorAll(".edit-button");
 for (let i = 0; i < deleteButtons.length; i++) {
-  deleteButtons[i].addEventListener("click", (event) => {
-    console.log("deleted");
+  editButtons[i].addEventListener("click", (event) => {
+    console.log("edited");
     event.preventDefault();
-    // const event_id = event.target.getAttribute("data-eventId");
-    document.location.replace(`/api/blog/dashboard`);
+    const event_id = event.target.getAttribute("data-eventId");
+    document.location.replace(`/blog/${event_id}`);
   });
 }
