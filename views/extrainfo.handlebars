@@ -1,14 +1,7 @@
-{{!-- <div class="container" id="main">
-  {{#each randList as |event|}}
-    {{> extrainfopartial event}}
-    {{/each}}
-
-</div> --}}
-
-<div class="container" id="extrainfo">
+<div class="container" id="main">
   <div class="card">
     <div class="card-header" id="year">
-      {{event.month}}/{{event.day}}/{{event.year}}
+      {{event.year}}
     </div>
     <div class="card-body">
       <p class="card-text">{{event.description}}</p>
@@ -19,7 +12,7 @@
         class="list-group-item list-group-item-action"
         aria-current="true"
       >
-        Wiki links
+        {{event.wikipedia}}
       </a>
 
     </div>
@@ -31,7 +24,7 @@
       >
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">Username</h5>
-          {{! <small>3 days ago</small> }}
+          <small>3 days ago</small>
         </div>
         <p class="mb-1">Title</p>
         <p>Blog</p>
