@@ -6,28 +6,34 @@
     <div class="card-body">
       <p class="card-text">{{event.description}}</p>
     </div>
-    <div class="list-group">
-      <a
-        href="#"
-        class="list-group-item list-group-item-action"
-        aria-current="true"
-      >
-        {{event.wikipedia}}
-      </a>
+  </div> 
 
+    {{!-- This is for the wiki links --}}
+    
+  <div class="list-group">
+    <div class="container" id="main">
+  
+     {{#each event.wikipedia as |info|}}
+      {{> extrainfopartial info}}
+        {{/each}}
     </div>
+
+  </div>
+
+
+    {{!-- This is for the blogs about htis event --}}
     <div class="list-group">
       <a
-        href="#"
+        {{!-- href="#" --}}
         class="list-group-item list-group-item-action"
         aria-current="true"
       >
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">Username</h5>
-          <small>3 days ago</small>
-        </div>
-        <p class="mb-1">Title</p>
-        <p>Blog</p>
+      <div class="container" id="main">
+  {{#each event.blogs as |info|}}
+    {{> wikipartials info}}
+    {{/each}}
+</div>
+        
       </a>
 
     </div>

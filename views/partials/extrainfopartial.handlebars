@@ -1,7 +1,10 @@
-<div class="container" id="main">
- 
-  {{#each event as |info|}}
-    {{> extrainfopartial info}}
-    {{/each}}
+{{!-- {{title}}<br />
+<br />
+<a href="{{wikipedia}}">{{wikipedia}}</a> --}}
+<ul class="list-group">
+  <li class="list-group-item">{{title}}<br /><a
+      href="{{wikipedia}}"
+    >{{wikipedia}}</a></li>
+  {{!-- <li class="list-group-item"><a href="{{wikipedia}}">{{wikipedia}}</a></li> --}}
 
-</div>
+</ul>
