@@ -3,9 +3,9 @@
     {{! You can access user data by doing  userInfo.username
           You can access event data by doing event.year or event.description}}
 
-    <div class="card-header blog-title">
+    <form class="card-header blog-title title">
       {{title}}
-    </div>
+    </form>
     <div class="card-header blog-title">
       Created at:
       {{format_date created_at}}
@@ -21,7 +21,11 @@
     </div>
   </div>
   <div class="card-footer">
-    <button type="button" class="btn btn-success">Edit Blog</button>
+    <button
+      type="button"
+      class="btn btn-success edit-btn"
+      data-blogId={{id}}
+    >Edit Blog</button>
     <button
       type="button"
       class="btn btn-danger del-btn"

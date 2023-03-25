@@ -21,3 +21,14 @@ for (let i = 0; i < deleteButtons.length; i++) {
       });
   });
 }
+
+const updateButton = document.querySelectorAll(".edit-btn");
+for (let i = 0; i < updateButton.length; i++) {
+  updateButton[i].addEventListener("click", (event) => {
+    event.preventDefault();
+    const event_id = event.target.getAttribute("data-blogId");
+
+    //make the fields editable
+    document.querySelector(".title");
+  });
+}
