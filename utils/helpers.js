@@ -3,9 +3,9 @@ module.exports = {
     return date.toLocaleTimeString();
   },
   format_date: (date) => {
-    return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${
-      new Date(date).getFullYear() + 5
-    }`;
+    return `${new Date(date).getMonth() + 1}/${new Date(
+      date
+    ).getDate()}/${new Date(date).getFullYear()}`;
   },
   getRandElements: (list, len) => {
     const randList = [];
@@ -30,5 +30,11 @@ module.exports = {
         }
       });
     }
+  },
+  getDate: () => {
+    return new Date().toLocaleDateString("en-us", {
+      month: "long",
+      day: "numeric",
+    });
   },
 };

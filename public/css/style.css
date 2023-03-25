@@ -84,6 +84,12 @@ body {
   margin-right: 20px;
 }
 
+#todays-date {
+  text-align:center;
+  width: 100%;
+  font-size: 1.4rem;
+}
+
 #no-blogs {
   margin-top: 30px;
   font-size: 1.7rem;
