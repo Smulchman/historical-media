@@ -16,7 +16,7 @@ body {
   color: #085823;
   text-align: center;
   padding-top: 5%;
-  font-family: prata !important;
+  font-family: "EB Garamond" !important;
 }
 
 #extrainfo {
@@ -28,7 +28,7 @@ body {
   border-style: none;
   background-color: rgb(216, 224, 137);
   font-size: 50px;
-  font-family: prata !important;
+  font-family: "EB Garamond" !important;
 }
 
 .logo {
