@@ -2,6 +2,9 @@
 const postFormHandler = async (event) => {
   event.preventDefault();
 
+  const titleEl = document.querySelector("#new-blog-title");
+  const contentEl = document.querySelector("#new-description");
+
   const title = document.querySelector("#new-blog-title").value.trim();
   const content = document.querySelector("#new-description").value.trim();
 
@@ -16,6 +19,23 @@ const postFormHandler = async (event) => {
       document.location.replace("/api/blog/dashboard");
     } else {
       alert("Failed to post new blog.");
+    }
+  } else {
+    if (!title) {
+      titleEl.className = "form-control red-border";
+      titleEl.addEventListener("input", () => {
+        if (titleEl.value !== "") {
+          titleEl.classList.remove("red-border");
+        }
+      });
+    }
+    if (!content) {
+      contentEl.className = "form-control red-border";
+      contentEl.addEventListener("input", () => {
+        if (contentEl.value !== "") {
+          contentEl.classList.remove("red-border");
+        }
+      });
     }
   }
 };
