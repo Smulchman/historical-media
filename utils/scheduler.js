@@ -5,7 +5,7 @@ const sequelize = require("../config/connection");
 const { Op } = require("sequelize");
 
 function scheduler() {
-  cron.schedule("*/15 * * * * *", async () => {
+  cron.schedule("0 0 0 * * *", async () => {
     const month = new Date().getMonth() + 1;
     const day = new Date().getDate();
 
