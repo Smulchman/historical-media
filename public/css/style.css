@@ -153,3 +153,13 @@ body {
   animation: shake 0.5s;
 }
 
+.btn {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#cardfooter {
+  border:5px;
+  padding: 5px;
+}
+
