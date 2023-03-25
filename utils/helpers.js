@@ -4,7 +4,7 @@ module.exports = {
   },
   format_date: (date) => {
     return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${
-      new Date(date).getFullYear() + 5
+      new Date(date).getFullYear()
     }`;
   },
   getRandElements: (list, len) => {
@@ -17,5 +17,8 @@ module.exports = {
       }
     }
     return randList;
+  },
+  getDate: () => {
+    return new Date().toLocaleDateString('en-us', { month: 'long', day: "numeric"});
   },
 };
