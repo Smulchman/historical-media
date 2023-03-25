@@ -13,3 +13,8 @@ for (let i = 0; i < blogButtons.length; i++) {
 document.querySelector("#dashboard").addEventListener("click", () => {
   document.location.replace("/api/blog/dashboard");
 });
+
+document.querySelector("#events-page").addEventListener("click", () => {
+  console.log("sent");
+  document.location.replace("/all-events");
+});

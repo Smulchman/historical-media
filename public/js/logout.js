@@ -27,3 +27,8 @@ for (let i = 0; i < blogButtons.length; i++) {
     document.location.replace(`/blog/${event_id}`);
   });
 }
+
+document.querySelector("#events-page").addEventListener("click", () => {
+  console.log("sent");
+  document.location.replace("/all-events");
+});
