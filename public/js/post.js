@@ -22,18 +22,24 @@ const postFormHandler = async (event) => {
     }
   } else {
     if (!title) {
-      titleEl.className = "form-control red-border";
+      titleEl.classList.add("red-border", "shake-animation");
+      timeoutID = setTimeout(() => {
+        titleEl.classList.remove("shake-animation");
+      }, 500);
       titleEl.addEventListener("input", () => {
         if (titleEl.value !== "") {
-          titleEl.classList.remove("red-border");
+          titleEl.classList.remove("red-border", "shake-animation");
         }
       });
     }
     if (!content) {
-      contentEl.className = "form-control red-border";
+      contentEl.classList.add("red-border", "shake-animation");
+      timeoutID = setTimeout(() => {
+        contentEl.classList.remove("shake-animation");
+      }, 500);
       contentEl.addEventListener("input", () => {
         if (contentEl.value !== "") {
-          contentEl.classList.remove("red-border");
+          contentEl.classList.remove("red-border", "shake-animation");
         }
       });
     }

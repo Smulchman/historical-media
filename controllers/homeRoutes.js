@@ -6,7 +6,7 @@ const router = require("express").Router();
 
 // Home Page
 
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   const month = new Date().getMonth() + 1;
   const day = new Date().getDate();
   const postData = await Event.findAll({
