@@ -1,3 +1,18 @@
+//import { animateEmptyFields } from "../utils/helpers";
+const animateEmptyFields = (email, emailEl) => {
+  if (!email) {
+    emailEl.classList.add("red-border", "shake-animation");
+    setTimeout(() => {
+      emailEl.classList.remove("shake-animation");
+    }, 500);
+    emailEl.addEventListener("input", () => {
+      if (emailEl.value !== "") {
+        emailEl.classList.remove("red-border", "shake-animation");
+      }
+    });
+  }
+};
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -22,28 +37,8 @@ const loginFormHandler = async (event) => {
       alert("Failed to log in.");
     }
   } else {
-    if (!email) {
-      emailEl.classList.add("red-border", "shake-animation");
-      timeoutID = setTimeout(() => {
-        emailEl.classList.remove("shake-animation");
-      }, 500);
-      emailEl.addEventListener("input", () => {
-        if (emailEl.value !== "") {
-          emailEl.classList.remove("red-border", "shake-animation");
-        }
-      });
-    }
-    if (!password) {
-      passwordEl.classList.add("red-border", "shake-animation");
-      timeoutID = setTimeout(() => {
-        passwordEl.classList.remove("shake-animation");
-      }, 500);
-      passwordEl.addEventListener("input", () => {
-        if (passwordEl.value !== "") {
-          passwordEl.classList.remove("red-border", "shake-animation");
-        }
-      });
-    }
+    animateEmptyFields(email, emailEl);
+    animateEmptyFields(password, passwordEl);
   }
 };
 

@@ -21,7 +21,7 @@ module.exports = {
   animateEmptyFields: (email, emailEl) => {
     if (!email) {
       emailEl.classList.add("red-border", "shake-animation");
-      timeoutID = setTimeout(() => {
+      setTimeout(() => {
         emailEl.classList.remove("shake-animation");
       }, 500);
       emailEl.addEventListener("input", () => {
