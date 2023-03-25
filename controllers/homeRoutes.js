@@ -89,18 +89,13 @@ router.get("/sign-up", async (req, res) => {
 });
 
 // Event Get "/event"
-router.get("/event", async (req, res) => {
-  res.render("event");
+router.get("/404", async (req, res) => {
+  res.render("404");
 });
 
 // Blog Get "/blog"
-router.get("/blog", withAuth, async (req, res) => {
-  if (req.session.loggedIn) {
-    res.render("blog");
-    return;
-  }
-
-  res.render("login");
+router.get("/blog/:id", withAuth, async (req, res) => {
+  res.render("blog");
 });
 
 // Blog UserDash "/userDash"
