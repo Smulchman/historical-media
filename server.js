@@ -7,9 +7,12 @@ const routes = require("./controllers");
 const sequelize = require("./config/connection");
 const helpers = require("./utils/helpers");
 const scheduler = require("./utils/scheduler");
+const http = require('http');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+const httpServer = http.createServer(app);
 
 const sess = {
   secret: process.env.SESSION_SECRET,
@@ -41,5 +44,5 @@ app.get("*", (req, res) => {
 });
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening"));
+  httpServer.listen(PORT, () => console.log("Now listening"));
 });
