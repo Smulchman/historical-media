@@ -1,19 +1,14 @@
+// redirect to the root of the website
 document.querySelector("#home").addEventListener("click", () => {
   document.location.replace("/");
 });
 
-const blogButtons = document.querySelectorAll(".blog");
-for (let i = 0; i < blogButtons.length; i++) {
-  blogButtons[i].addEventListener("click", (event) => {
-    const event_id = event.target.getAttribute("data-eventId");
-    document.location.replace(`/blog/${event_id}`);
-  });
-}
-
+// the dashboard header will send user to dashboard
 document.querySelector("#dashboard").addEventListener("click", () => {
   document.location.replace("/api/blog/dashboard");
 });
 
+//view all button will send the user to a new page with all of today's events
 const viewAll = document.querySelectorAll(".view-all");
 for (let i = 0; i < viewAll.length; i++) {
   viewAll[i].addEventListener("click", () => {

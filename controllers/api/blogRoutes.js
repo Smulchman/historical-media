@@ -8,11 +8,8 @@ router.post("/", withAuth, async (req, res) => {
     const dbBlogData = await Blog.create({
       title: req.body.title,
       content: req.body.content,
-      event_id: req.body.event_id,
+      event_id: req.session.event_id,
       user_id: req.session.user_id,
-    });
-    req.session.save(() => {
-      req.session.event_id = event_id;
     });
     res.status(200).json(dbBlogData);
   } catch (err) {
