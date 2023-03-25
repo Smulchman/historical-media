@@ -1,6 +1,6 @@
 <div class="container" id="dashcontainer" >
     <h3 id="author">
-    Author:{{userInfo.username}}
+    Author: {{userInfo.username}}
     </h3> 
     {{#if userBlogs}}
         {{#each userBlogs as |event|}}
@@ -10,3 +10,5 @@
         <p id="no-blogs">No Blogs Published</p>
     {{/if}}
 </div>
+
+<script src="/js/popup.js"></script>
