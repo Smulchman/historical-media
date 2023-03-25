@@ -10,6 +10,7 @@ router.post("/", withAuth, async (req, res) => {
       content: req.body.content,
       event_id: req.session.event_id,
       user_id: req.session.user_id,
+      
     });
     res.status(200).json(dbBlogData);
   } catch (err) {

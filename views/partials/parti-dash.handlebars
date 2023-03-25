@@ -2,13 +2,20 @@
   <div class="card">
     {{! You can access user data by doing  userInfo.username
           You can access event data by doing event.year or event.description}}
-    <div class="card-header">
-      {{user-name}}
+         
+    <div class="card-header blog-title">
       {{title}}
+    </div>
+    <div class="card-header">
+      {{event.description}} - {{event.year}}
     </div>
     <div class="card-body">
       <p class="card-text">{{content}}</p>
       {{!-- <a href="#" class="btn btn-primary">{{moreinfo}}</a> --}}
     </div>
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-success">Edit Blog</button>
+    <button type="button" class="btn btn-success">Delete Blog</button>
   </div>
 </div>
