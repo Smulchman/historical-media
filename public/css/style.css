@@ -15,8 +15,12 @@ body {
 #here {
   color: #085823;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 3%;
   font-family: "EB Garamond" !important;
+}
+
+.blog-title {
+  font-size: 1.13rem !important;
 }
 
 #extrainfo {
@@ -55,7 +59,7 @@ body {
 }
 
 #histori {
-  --c: #085823;
+  --c: #1f3826;
   line-height: 1.2em;
   background: conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0)
       0 var(--p, 0%),
@@ -68,7 +72,7 @@ body {
 #histori:hover {
   --p: 100%;
   --s: calc(50% + 0.61em);
-  color: #e22e2e;
+  color: #ffffff;
 }
 
 #link {
