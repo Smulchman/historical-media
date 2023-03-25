@@ -28,6 +28,10 @@ body {
   margin-bottom: 35px;
 }
 
+#button-box {
+  margin-top: 10px;
+}
+
 #title {
   border-style: none;
   background-color: rgb(216, 224, 137);
