@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container" id="recentblogposts">
   <div class="card">
     <div class="card-header blog-title">
       {{title}}  
     </div>
-    <div class="card-header blog-title">
+    <div class="card-header">
     Created at: {{format_date created_at}}  
     </div>
     <div class="card-header">
@@ -13,6 +13,8 @@
       <p class="card-text">{{content}}</p>
       {{!-- <a href="#" class="btn btn-primary">{{moreinfo}}</a> --}}
     </div>
+    </div>
+  <div class="container">
   <div class="card-footer">
     <button type="button" class="btn btn-success">Edit Blog</button>
     <button type="button" class="btn btn-success">Delete Blog</button>
