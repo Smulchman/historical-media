@@ -57,7 +57,7 @@ router.get("/all-events", async (req, res) => {
 
   const posts = postData.map((post) => post.get({ plain: true }));
 
-  res.render("event", { posts });
+  res.render("event", { posts, loggedIn: req.session.loggedIn });
 });
 
 // Dashboard/User profile GET "/user-profile/:id"
@@ -106,7 +106,18 @@ router.get("/404", async (req, res) => {
 
 // Blog Get "/blog"
 router.get("/blog/:id", withAuth, async (req, res) => {
-  res.render("blog");
+  const ev = await Event.findOne({
+    where: {
+      id: req.params.id,
+    },
+  });
+  //if no event is available for that endpoint then go to a 404 page
+  if (ev) {
+    req.session.event_id = req.params.id;
+    res.render("blog", { loggedIn: req.session.loggedIn });
+  } else {
+    res.render("404", { badEventId: true });
+  }
 });
 
 // Blog UserDash "/userDash"
