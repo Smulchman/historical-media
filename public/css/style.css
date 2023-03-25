@@ -102,3 +102,7 @@ body {
 .red-border {
   border-color: red;
 }
+
+.not-found {
+  text-align: center;
+}

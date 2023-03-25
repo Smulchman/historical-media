@@ -116,7 +116,7 @@ router.get("/blog/:id", withAuth, async (req, res) => {
     req.session.event_id = req.params.id;
     res.render("blog", { loggedIn: req.session.loggedIn });
   } else {
-    res.render("404");
+    res.render("404", { badEventId: true });
   }
 });
 
