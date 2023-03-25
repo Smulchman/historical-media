@@ -22,6 +22,7 @@ Blog.init(
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
+      
     },
     // foreign key for corresponding event
     event_id: {
