@@ -79,7 +79,7 @@ const blogData = [
   },
   {
     title: 'My Cursed Birthday',
-    content: `Perhaps this is something that everyone has (since history is lined with millions of corpses) but my birthday has some really brutal events associated with it. Thich Quang Duc self immolated. Henry VII married Catherine of Aragon, and, in addition to many others, Troy was sacked.`,
+    content: `Perhaps this is something that everyone has (since history is lined with millions of corpses) but my birthday has some really brutal events associated with it. Thich Quang Duc self immolated. Henry VIII married Catherine of Aragon, and, in addition to many others, Troy was sacked.`,
     event_id: 44,
     user_id: 5,
   },
