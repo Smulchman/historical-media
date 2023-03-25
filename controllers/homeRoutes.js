@@ -144,4 +144,28 @@ router.get("/event/:id", async (req, res) => {
   }
 });
 
+// Delete post
+router.delete("/blog/:id", async (res, req) => {
+  const blog = await Blog.findOne({
+    where: {
+      id: req.params.id,
+    },
+  });
+  if (!blog) {
+    res.render(404);
+    return;
+  } else {
+    if (blog.user_id !== req.session.user_id) {
+      res.render(404);
+      return;
+    } else {
+      Blog.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+    }
+  }
+});
+
 module.exports = router;

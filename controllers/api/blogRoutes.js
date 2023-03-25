@@ -63,15 +63,4 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
-// Delete post
-router.delete("/blog:id", (res, req) => {
-  Blog.destroy({
-    where: {
-      event_id: req.params.event_id,
-    },
-  }).then((deleteBlog) => {
-    res.json(deleteBlog);
-  });
-});
-
 module.exports = router;
