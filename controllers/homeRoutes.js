@@ -164,11 +164,12 @@ router.delete("/blog/:id", async (req, res) => {
       return;
     } else {
       // Deletes the blog based on its id
-      await Blog.destroy({
+      const del = await Blog.destroy({
         where: {
           id: req.params.id,
         },
       });
+      res.status(200).json(del);
     }
   }
 });

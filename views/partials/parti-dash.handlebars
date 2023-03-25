@@ -6,6 +6,10 @@
     <div class="card-header blog-title">
       {{title}}
     </div>
+    <div class="card-header blog-title">
+      Created at:
+      {{format_date created_at}}
+    </div>
     <div class="card-header">
       {{event.description}}
       -
@@ -17,15 +21,13 @@
     </div>
   </div>
   <div class="card-footer">
+    <button type="button" class="btn btn-success">Edit Blog</button>
     <button
       type="button"
-      class="btn btn-success edit-button"
-      data-eventId={{id}}
-    >Edit Blog</button>
-    <button
-      type="button"
-      class="btn btn-success delete-button"
-      data-eventId={{id}}
+      class="btn btn-danger del-btn"
+      data-bs-toggle="modal"
+      data-bs-target="#confirmDeleteModal"
+      data-blogId={{id}}
     >Delete Blog</button>
   </div>
 </div>
