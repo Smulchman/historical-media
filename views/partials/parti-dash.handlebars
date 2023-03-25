@@ -1,23 +1,30 @@
 <div class="container" id="recentblogposts">
   <div class="card">
     <div class="card-header blog-title">
-      {{title}}  
+      {{title}}
     </div>
     <div class="card-header">
     Posted {{format_date created_at}}  
     </div>
     <div class="card-header">
-      {{event.description}} - {{event.year}}
+      {{event.description}}
+      -
+      {{event.year}}
     </div>
     <div class="card-body">
       <p class="card-text">{{content}}</p>
       {{!-- <a href="#" class="btn btn-primary">{{moreinfo}}</a> --}}
     </div>
     </div>
-  <div class="container" id="button-box">
-  <div class="card-footer">
+  <div class="container" >
+  <div class="card-footer" id="button-box">
     <button type="button" class="btn btn-success">Edit Blog</button>
-    <button type="button" class="btn btn-success">Delete Blog</button>
-  </div>
+    <button
+      type="button"
+      class="btn btn-danger del-btn"
+      data-bs-toggle="modal"
+      data-bs-target="#confirmDeleteModal"
+      data-blogId={{id}}
+    >Delete Blog</button>
   </div>
 </div>

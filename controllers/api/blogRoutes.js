@@ -10,9 +10,29 @@ router.post("/", withAuth, async (req, res) => {
       content: req.body.content,
       event_id: req.session.event_id,
       user_id: req.session.user_id,
-      
     });
     res.status(200).json(dbBlogData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// update blog PUT("api/blog/:id")
+router.put("/:id", withAuth, async (req, res) => {
+  try {
+    const updatedBlog = await Blog.update(
+      {
+        title: req.body.title,
+        content: req.body.content,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(updatedBlog);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
