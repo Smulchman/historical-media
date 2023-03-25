@@ -145,27 +145,34 @@ router.get("/event/:id", async (req, res) => {
 });
 
 // Delete post
-router.delete("/blog/:id", async (res, req) => {
+router.delete("/blog/:id", async (req, res) => {
   const blog = await Blog.findOne({
     where: {
       id: req.params.id,
     },
   });
+
   if (!blog) {
-    res.render(404);
+    res.render("404");
     return;
   } else {
     if (blog.user_id !== req.session.user_id) {
-      res.render(404);
+      res.render("404");
       return;
     } else {
-      Blog.destroy({
+      await Blog.destroy({
         where: {
           id: req.params.id,
         },
       });
+      res.render("/blog/dashboard");
     }
   }
+});
+
+router.get("/blogs", async (req, res) => {
+  const blogs = await Blog.findAll();
+  res.json(blogs);
 });
 
 module.exports = router;
