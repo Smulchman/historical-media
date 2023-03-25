@@ -144,22 +144,26 @@ router.get("/event/:id", async (req, res) => {
   }
 });
 
-// Delete post
+// Delete blog DELETE (/blog/:id)
 router.delete("/blog/:id", async (req, res) => {
+  // Finds one blog
   const blog = await Blog.findOne({
     where: {
       id: req.params.id,
     },
   });
 
+  // If no blog with that id exists, send 404 page
   if (!blog) {
     res.render("404");
     return;
   } else {
+    // If user id does not match the session user id, send 404 page
     if (blog.user_id !== req.session.user_id) {
       res.render("404");
       return;
     } else {
+      // Deletes the blog based on its id
       await Blog.destroy({
         where: {
           id: req.params.id,
@@ -170,6 +174,7 @@ router.delete("/blog/:id", async (req, res) => {
   }
 });
 
+// TESTING ROUTE to view all blogs
 router.get("/blogs", async (req, res) => {
   const blogs = await Blog.findAll();
   res.json(blogs);
