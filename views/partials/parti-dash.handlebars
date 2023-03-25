@@ -4,7 +4,7 @@
       {{title}}  
     </div>
     <div class="card-header">
-    Created at: {{format_date created_at}}  
+    Posted {{format_date created_at}}  
     </div>
     <div class="card-header">
       {{event.description}} - {{event.year}}
@@ -14,7 +14,7 @@
       {{!-- <a href="#" class="btn btn-primary">{{moreinfo}}</a> --}}
     </div>
     </div>
-  <div class="container">
+  <div class="container" id="button-box">
   <div class="card-footer">
     <button type="button" class="btn btn-success">Edit Blog</button>
     <button type="button" class="btn btn-success">Delete Blog</button>
