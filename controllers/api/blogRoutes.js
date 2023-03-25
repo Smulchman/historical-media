@@ -10,6 +10,7 @@ router.post("/", withAuth, async (req, res) => {
       content: req.body.content,
       event_id: req.session.event_id,
       user_id: req.session.user_id,
+      
     });
     res.status(200).json(dbBlogData);
   } catch (err) {
@@ -52,6 +53,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
     userBlogs = userBlogs.map((post) => post.get({ plain: true }));
     userInfo = userInfo.get({ plain: true });
+    console.log(userBlogs);
     res.render("userDash", {
       userBlogs,
       userInfo,

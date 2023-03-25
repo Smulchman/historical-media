@@ -141,6 +141,15 @@ body {
   }
 }
 
+#Author {
+  margin-left: 20px;
+}
+
+#dashcontainer {
+  padding: 10px;
+}
+
 .shake-animation {
   animation: shake 0.5s;
 }
+
