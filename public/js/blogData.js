@@ -16,3 +16,13 @@ for (let i = 0; i < eventLinks.length; i++) {
     document.location.replace(`/event/${event_id}`);
   });
 }
+
+const deleteButtons = document.querySelectorAll(".delete-button");
+for (let i = 0; i < deleteButtons.length; i++) {
+  deleteButtons[i].addEventListener("click", (event) => {
+    console.log("deleted");
+    event.preventDefault();
+    // const event_id = event.target.getAttribute("data-eventId");
+    document.location.replace(`/api/blog/dashboard`);
+  });
+}
