@@ -1,12 +1,16 @@
 <div class="container" id="recentblogposts">
   <div class="container" id="recentposts">
     <div class="card">
-    <div class="card-header blog-title">
-      {{title}} by: {{user.username}}
-    </div>
-    <div class="card-header">
-      {{event.description}} - {{event.year}}
-    </div>
+      <div class="card-header blog-title">
+        {{title}}
+        (by:
+        {{user.username}})
+      </div>
+      <div class="card-header">
+        {{event.description}}
+        -
+        {{event.year}}
+      </div>
       <div class="card-body">
         <p class="card-text">{{content}}</p>
       </div>
