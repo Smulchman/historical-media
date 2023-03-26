@@ -40,7 +40,7 @@ for (let i = 0; i < updateButton.length; i++) {
       updateButton[i].parentElement.parentElement.parentElement.querySelector(
         ".content"
       );
-    //show some indication that the user cna edit the fields
+    //show some indication that the user can edit the fields
     title.setAttribute("contenteditable", "true");
     title.style.backgroundColor = "rgb(216, 224, 137)";
     content.setAttribute("contenteditable", "true");
