@@ -75,7 +75,7 @@ body {
 #histori {
   --c: #1f3826;
   line-height: 1.2em;
-  background: conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0)
+  background: conic-gradient(from -140deg at 100% 50%, var(--c) 90deg, #0000 0)
       0 var(--p, 0%),
     conic-gradient(from -135deg at 1.2em 50%, #0000 90deg, var(--c) 0) 100%
       var(--p, 0%);
@@ -187,4 +187,8 @@ body {
   flex: 1;
   display: flex;
   resize: none;
+}
+
+.event-title:hover {
+  cursor: pointer;
 }

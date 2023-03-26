@@ -1,18 +1,3 @@
-//import { animateEmptyFields } from "../utils/helpers";
-const animateEmptyFields = (email, emailEl) => {
-  if (!email) {
-    emailEl.classList.add("red-border", "shake-animation");
-    setTimeout(() => {
-      emailEl.classList.remove("shake-animation");
-    }, 500);
-    emailEl.addEventListener("input", () => {
-      if (emailEl.value !== "") {
-        emailEl.classList.remove("red-border", "shake-animation");
-      }
-    });
-  }
-};
-
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -36,7 +21,9 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to sign up.");
+      animateWrongFields(usernameEl);
+      animateWrongFields(emailEl);
+      animateWrongFields(passwordEl);
     }
   } else {
     animateEmptyFields(username, usernameEl);

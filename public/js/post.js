@@ -1,18 +1,3 @@
-//import { animateEmptyFields } from "../utils/helpers";
-const animateEmptyFields = (email, emailEl) => {
-  if (!email) {
-    emailEl.classList.add("red-border", "shake-animation");
-    setTimeout(() => {
-      emailEl.classList.remove("shake-animation");
-    }, 500);
-    emailEl.addEventListener("input", () => {
-      if (emailEl.value !== "") {
-        emailEl.classList.remove("red-border", "shake-animation");
-      }
-    });
-  }
-};
-
 //clicking the post button will post a blog
 const postFormHandler = async (event) => {
   event.preventDefault();
@@ -43,3 +28,10 @@ const postFormHandler = async (event) => {
 document
   .querySelector(".post-button")
   .addEventListener("click", postFormHandler);
+
+const eventTitle = document.querySelector(".event-title");
+eventTitle.addEventListener("click", (event) => {
+  event.preventDefault();
+  const event_id = event.target.getAttribute("data-eventId");
+  document.location.replace(`/event/${event_id}`);
+});
