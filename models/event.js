@@ -7,7 +7,6 @@ Event.init(
   {
     // all keys in this model correspond to the keys of the data returned by the API
     // id of event, auto-incrementing
-    // potentially would be wiser to randomize keys?
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
