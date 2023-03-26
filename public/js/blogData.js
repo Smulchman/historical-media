@@ -16,3 +16,12 @@ for (let i = 0; i < eventLinks.length; i++) {
     document.location.replace(`/event/${event_id}`);
   });
 }
+
+const eventTitle = document.querySelectorAll(".event-title");
+for (let i = 0; i < eventTitle.length; i++) {
+  eventTitle[i].addEventListener("click", (event) => {
+    event.preventDefault();
+    const event_id = event.target.getAttribute("data-eventId");
+    document.location.replace(`/event/${event_id}`);
+  });
+}

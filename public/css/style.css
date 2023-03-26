@@ -188,3 +188,7 @@ body {
   display: flex;
   resize: none;
 }
+
+.card-header:hover {
+  cursor: pointer;
+}
