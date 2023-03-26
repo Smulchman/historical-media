@@ -19,13 +19,13 @@
 
     {{!-- This is for the blogs about htis event --}}
 <div class="container">
-  <div class="list-group" id="recentposts">
+  <div class="container text-center" id="recentposts">
     <button
         type="button"
         class="btn btn-outline-success btn-sm blog event-blog-btn"
         data-eventId={{event.id}}
       >Blog about this event!</button>
-    </div>
+  </div>
     {{#if event.blogs}}
       {{#each event.blogs as |info|}}
         {{> wikipartials info}}

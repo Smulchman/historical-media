@@ -13,6 +13,18 @@ const animateEmptyFields = (email, emailEl) => {
   }
 };
 
+const animateWrongFields = (emailEl) => {
+  emailEl.classList.add("red-border", "shake-animation");
+  setTimeout(() => {
+    emailEl.classList.remove("shake-animation");
+  }, 500);
+  emailEl.addEventListener("input", () => {
+    if (emailEl.value !== "") {
+      emailEl.classList.remove("red-border", "shake-animation");
+    }
+  });
+};
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -34,7 +46,8 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to log in.");
+      animateWrongFields(emailEl);
+      animateWrongFields(passwordEl);
     }
   } else {
     animateEmptyFields(email, emailEl);
