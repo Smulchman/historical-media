@@ -1,13 +1,45 @@
-<div class="container">
+<div class="container" id="recentblogposts">
   <div class="card">
-    {{! You can access user data by doing  userInfo.username
-          You can access event data by doing event.year or event.description}}
-    <div class="card-header">
+    <div class="card-header blog-title title">
       {{title}}
     </div>
+    <div id="date">
+      {{#if (isBefore created_at updated_at)}}
+        <div class="card-header">
+          Posted:
+          {{format_date created_at}}
+        </div>
+      {{else}}
+        <div class="card-header">
+          Updated:
+          {{format_date updated_at}}
+        </div>
+      {{/if}}
+    </div>
+    <div class="card-header">
+      {{event.description}}
+      -
+      {{event.year}}
+    </div>
     <div class="card-body">
-      <p class="card-text">{{content}}</p>
+      <p class="card-text content">{{content}}</p>
       {{!-- <a href="#" class="btn btn-primary">{{moreinfo}}</a> --}}
+    </div>
+  </div>
+  <div class="container">
+    <div class="card-footer" id="button-box">
+      <button
+        type="button"
+        class="btn btn-success edit-btn"
+        data-blogId={{id}}
+      >Edit Blog</button>
+      <button
+        type="button"
+        class="btn btn-danger del-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#confirmDeleteModal"
+        data-blogId={{id}}
+      >Delete Blog</button>
     </div>
   </div>
 </div>

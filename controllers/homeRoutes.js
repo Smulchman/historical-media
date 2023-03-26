@@ -35,9 +35,6 @@ router.get("/", async (req, res) => {
     ],
   });
   recBlogs = recBlogs.map((post) => post.get({ plain: true }));
-  console.log(recBlogs);
-  console.log(randList);
-
   //console.log(randList);
   res.render("homepage", {
     randList,
@@ -100,12 +97,7 @@ router.get("/sign-up", async (req, res) => {
   res.render("signup");
 });
 
-// Event Get "/event"
-router.get("/404", async (req, res) => {
-  res.render("404");
-});
-
-// Blog Get "/blog"
+// Blog Get "/blog/:id"
 router.get("/blog/:id", withAuth, async (req, res) => {
   const ev = await Event.findOne({
     where: {
@@ -113,22 +105,80 @@ router.get("/blog/:id", withAuth, async (req, res) => {
     },
   });
   //if no event is available for that endpoint then go to a 404 page
+  const event = ev.get({ plain: true });
   if (ev) {
     req.session.event_id = req.params.id;
-    res.render("blog", { loggedIn: req.session.loggedIn });
+    res.render("blog", { event, loggedIn: req.session.loggedIn });
   } else {
     res.render("404", { badEventId: true });
   }
 });
 
-// Blog UserDash "/userDash"
-router.get("/userDash", async (req, res) => {
-  res.render("userDash");
+//will return the events info, blogs written about it with the author's info
+// GET (/event/:id)
+router.get("/event/:id", async (req, res) => {
+  const ev = await Event.findOne({
+    where: {
+      id: req.params.id,
+    },
+    include: [
+      {
+        model: Blog,
+        include: [
+          {
+            model: User,
+            required: true,
+            attributes: { exclude: ["password"] },
+          },
+        ],
+      },
+    ],
+  });
+  const event = ev.get({ plain: true });
+  console.log(event);
+  //if no event is available for that endpoint then go to a 404 page
+  if (ev) {
+    req.session.event_id = req.params.id;
+    res.render("extrainfo", { event, loggedIn: req.session.loggedIn });
+  } else {
+    res.render("404", { badEventId: true });
+  }
 });
 
-// Blog extrainfo "/extrainfo"
-router.get("/extrainfo", async (req, res) => {
-  res.render("extrainfo");
+// Delete blog DELETE (/blog/:id)
+router.delete("/blog/:id", async (req, res) => {
+  // Finds one blog
+  const blog = await Blog.findOne({
+    where: {
+      id: req.params.id,
+    },
+  });
+
+  // If no blog with that id exists, send 404 page
+  if (!blog) {
+    res.render("404");
+    return;
+  } else {
+    // If user id does not match the session user id, send 404 page
+    if (blog.user_id !== req.session.user_id) {
+      res.render("404");
+      return;
+    } else {
+      // Deletes the blog based on its id
+      const del = await Blog.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+      res.status(200).json(del);
+    }
+  }
+});
+
+// TESTING ROUTE to view all blogs
+router.get("/blogs", async (req, res) => {
+  const blogs = await Blog.findAll();
+  res.json(blogs);
 });
 
 module.exports = router;

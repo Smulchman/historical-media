@@ -19,6 +19,28 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
+// update blog PUT("api/blog/:id")
+router.put("/:id", withAuth, async (req, res) => {
+  try {
+    const updatedBlog = await Blog.update(
+      {
+        title: req.body.title,
+        content: req.body.content,
+      },
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      }
+    );
+    res.status(200).json(updatedBlog);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // get up to 5 most recent blogs GET("api/blog")
 router.get("/", async (req, res) => {
   try {
@@ -44,6 +66,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
         model: Event,
         required: true,
       },
+      order: [["updated_at", "DESC"]],
     });
     let userInfo = await User.findOne({
       where: {
@@ -53,6 +76,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
     userBlogs = userBlogs.map((post) => post.get({ plain: true }));
     userInfo = userInfo.get({ plain: true });
+    console.log(userBlogs);
     res.render("userDash", {
       userBlogs,
       userInfo,

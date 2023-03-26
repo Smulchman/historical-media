@@ -39,13 +39,24 @@ Blog.init(
         key: "id",
       },
     },
+    created_at: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      allowNull: false
+    },
+    updated_at: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      allowNull: false
+    }
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
+    updatedAt: 'updated_at',
+    createdAt: 'created_at',
     freezeTableName: true,
     underscored: true,
-    freezeTableName: true,
     modelName: "blog",
   }
 );

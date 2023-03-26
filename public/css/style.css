@@ -15,8 +15,22 @@ body {
 #here {
   color: #085823;
   text-align: center;
-  padding-top: 5%;
-  font-family: prata !important;
+  padding-top: 3%;
+  font-family: "EB Garamond" !important;
+}
+
+.blog-title {
+  font-size: 1.13rem !important;
+}
+
+.event-title {
+  /* font-style: italic; */
+  color: #085823;
+  font-size: 1.07rem;
+}
+
+.homepage-event {
+  font-size: 1.12rem;
 }
 
 #extrainfo {
@@ -24,11 +38,15 @@ body {
   margin-bottom: 35px;
 }
 
+#button-box {
+  margin-top: 10px;
+}
+
 #title {
   border-style: none;
   background-color: rgb(216, 224, 137);
   font-size: 50px;
-  font-family: prata !important;
+  font-family: "EB Garamond" !important;
 }
 
 .logo {
@@ -55,7 +73,7 @@ body {
 }
 
 #histori {
-  --c: #085823;
+  --c: #1f3826;
   line-height: 1.2em;
   background: conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0)
       0 var(--p, 0%),
@@ -68,7 +86,7 @@ body {
 #histori:hover {
   --p: 100%;
   --s: calc(50% + 0.61em);
-  color: #e22e2e;
+  color: #ffffff;
 }
 
 #link {
@@ -85,7 +103,7 @@ body {
 }
 
 #todays-date {
-  text-align:center;
+  text-align: center;
   width: 100%;
   font-size: 1.4rem;
 }
@@ -137,6 +155,36 @@ body {
   }
 }
 
+#Author {
+  margin-left: 20px;
+}
+
+#dashcontainer {
+  padding: 10px;
+}
+
 .shake-animation {
   animation: shake 0.5s;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#cardfooter {
+  border: 5px;
+  padding: 5px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.text-box {
+  flex: 1;
+  display: flex;
+  resize: none;
 }

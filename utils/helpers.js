@@ -1,4 +1,7 @@
 module.exports = {
+  isBefore: (created_at, updated_at) => {
+    return !(created_at < updated_at);
+  },
   format_time: (date) => {
     return date.toLocaleTimeString();
   },
@@ -21,7 +24,7 @@ module.exports = {
   animateEmptyFields: (email, emailEl) => {
     if (!email) {
       emailEl.classList.add("red-border", "shake-animation");
-      timeoutID = setTimeout(() => {
+      setTimeout(() => {
         emailEl.classList.remove("shake-animation");
       }, 500);
       emailEl.addEventListener("input", () => {

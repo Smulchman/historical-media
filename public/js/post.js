@@ -1,3 +1,18 @@
+//import { animateEmptyFields } from "../utils/helpers";
+const animateEmptyFields = (email, emailEl) => {
+  if (!email) {
+    emailEl.classList.add("red-border", "shake-animation");
+    setTimeout(() => {
+      emailEl.classList.remove("shake-animation");
+    }, 500);
+    emailEl.addEventListener("input", () => {
+      if (emailEl.value !== "") {
+        emailEl.classList.remove("red-border", "shake-animation");
+      }
+    });
+  }
+};
+
 //clicking the post button will post a blog
 const postFormHandler = async (event) => {
   event.preventDefault();
@@ -21,28 +36,8 @@ const postFormHandler = async (event) => {
       alert("Failed to post new blog.");
     }
   } else {
-    if (!title) {
-      titleEl.classList.add("red-border", "shake-animation");
-      timeoutID = setTimeout(() => {
-        titleEl.classList.remove("shake-animation");
-      }, 500);
-      titleEl.addEventListener("input", () => {
-        if (titleEl.value !== "") {
-          titleEl.classList.remove("red-border", "shake-animation");
-        }
-      });
-    }
-    if (!content) {
-      contentEl.classList.add("red-border", "shake-animation");
-      timeoutID = setTimeout(() => {
-        contentEl.classList.remove("shake-animation");
-      }, 500);
-      contentEl.addEventListener("input", () => {
-        if (contentEl.value !== "") {
-          contentEl.classList.remove("red-border", "shake-animation");
-        }
-      });
-    }
+    animateEmptyFields(title, titleEl);
+    animateEmptyFields(content, contentEl);
   }
 };
 document
