@@ -1,4 +1,4 @@
-// the blog button will send the user to the blog page if loggedIn
+// the blog button will send the user to the blog page if not loggedIn
 const blogButtons = document.querySelectorAll(".blog");
 for (let i = 0; i < blogButtons.length; i++) {
   blogButtons[i].addEventListener("click", (event) => {

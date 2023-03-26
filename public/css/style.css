@@ -189,6 +189,6 @@ body {
   resize: none;
 }
 
-.card-header:hover {
+.event-title:hover {
   cursor: pointer;
 }

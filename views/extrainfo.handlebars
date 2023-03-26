@@ -16,11 +16,24 @@
     </div>
   </div> 
 </div>
+
     {{!-- This is for the blogs about htis event --}}
 <div class="container">
   <div class="list-group" id="recentposts">
+    <button
+        type="button"
+        class="btn btn-outline-success btn-sm blog event-blog-btn"
+        data-eventId={{event.id}}
+      >Blog about this event!</button>
+    </div>
+    {{#if event.blogs}}
       {{#each event.blogs as |info|}}
         {{> wikipartials info}}
-      {{/each}}   
+      {{/each}}
+    {{else}}
+      <p id="no-blogs">No Blogs Published</p>  
+    {{/if}}
   </div>
 </div>
+
+<script src="/js/eventDetails.js"></script>
