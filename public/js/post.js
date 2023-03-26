@@ -43,3 +43,10 @@ const postFormHandler = async (event) => {
 document
   .querySelector(".post-button")
   .addEventListener("click", postFormHandler);
+
+const eventTitle = document.querySelector(".event-title");
+eventTitle.addEventListener("click", (event) => {
+  event.preventDefault();
+  const event_id = event.target.getAttribute("data-eventId");
+  document.location.replace(`/event/${event_id}`);
+});
