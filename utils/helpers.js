@@ -1,4 +1,7 @@
 module.exports = {
+  isBefore: (created_at, updated_at) => {
+    return !(created_at < updated_at);
+  },
   format_time: (date) => {
     return date.toLocaleTimeString();
   },

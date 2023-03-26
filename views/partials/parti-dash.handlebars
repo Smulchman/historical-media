@@ -3,9 +3,18 @@
     <div class="card-header blog-title title">
       {{title}}
     </div>
-    <div class="card-header">
-      Posted
-      {{format_date created_at}}
+    <div id="date">
+      {{#if (isBefore created_at updated_at)}}
+        <div class="card-header">
+          Posted
+          {{format_date created_at}}
+        </div>
+      {{else}}
+        <div class="card-header">
+          Updated
+          {{format_date updated_at}}
+        </div>
+      {{/if}}
     </div>
     <div class="card-header">
       {{event.description}}
@@ -13,7 +22,7 @@
       {{event.year}}
     </div>
     <div class="card-body">
-      <p class="card-text">{{content}}</p>
+      <p class="card-text content">{{content}}</p>
       {{!-- <a href="#" class="btn btn-primary">{{moreinfo}}</a> --}}
     </div>
   </div>
