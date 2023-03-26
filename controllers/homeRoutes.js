@@ -134,14 +134,18 @@ router.get("/event/:id", async (req, res) => {
       },
     ],
   });
-  const event = ev.get({ plain: true });
-  console.log(event);
-  //if no event is available for that endpoint then go to a 404 page
   if (ev) {
-    req.session.event_id = req.params.id;
-    res.render("extrainfo", { event, loggedIn: req.session.loggedIn });
+    const event = ev.get({ plain: true });
+    console.log(event);
+    //if no event is available for that endpoint then go to a 404 page
+    if (ev) {
+      req.session.event_id = req.params.id;
+      res.render("extrainfo", { event, loggedIn: req.session.loggedIn });
+    } else {
+      res.render("404", { badEventId: true });
+    }
   } else {
-    res.render("404", { badEventId: true });
+    res.render("404");
   }
 });
 
