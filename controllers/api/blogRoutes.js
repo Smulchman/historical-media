@@ -29,6 +29,7 @@ router.put("/:id", withAuth, async (req, res) => {
       {
         where: {
           id: req.params.id,
+          user_id: req.session.user_id,
         },
       }
     );
@@ -64,6 +65,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
         model: Event,
         required: true,
       },
+      order: [["updated_at", "DESC"]],
     });
     let userInfo = await User.findOne({
       where: {

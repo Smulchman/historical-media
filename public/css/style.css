@@ -176,3 +176,15 @@ body {
   border: 5px;
   padding: 5px;
 }
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.text-box {
+  flex: 1;
+  display: flex;
+  resize: none;
+}
