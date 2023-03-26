@@ -23,6 +23,16 @@ body {
   font-size: 1.13rem !important;
 }
 
+.event-title {
+  /* font-style: italic; */
+  color: #085823;
+  font-size: 1.07rem;
+}
+
+.homepage-event {
+  font-size: 1.12rem;
+}
+
 #extrainfo {
   margin-top: 35px;
   margin-bottom: 35px;
@@ -93,7 +103,7 @@ body {
 }
 
 #todays-date {
-  text-align:center;
+  text-align: center;
   width: 100%;
   font-size: 1.4rem;
 }
@@ -163,7 +173,6 @@ body {
 }
 
 #cardfooter {
-  border:5px;
+  border: 5px;
   padding: 5px;
 }
-
