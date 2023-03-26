@@ -73,7 +73,7 @@ body {
 }
 
 #histori {
-  --c: #1f3826;
+  --c: #2b3035;
   line-height: 1.2em;
   background: conic-gradient(from -140deg at 100% 50%, var(--c) 90deg, #0000 0)
       0 var(--p, 0%),
