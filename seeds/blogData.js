@@ -2,19 +2,16 @@ const { Blog } = require('../models');
 
 const blogData = [
   {
-    title: 'A Riot as a Snapshot of the Future to Be',
-    content: `While the riots occurred due to the very lax sentence given to William Berner (given a manslaughter charge for a premeditated murder,) the other perpetrator Joe Palmer, a man of mixed African and European descent, was not extended the same privilege. He was sentenced to be hanged.
-    It's one of countless examples of African-American men not being extended the same legal treatment as white citizens. Palmer's sentencing was so unremarkable at the time that, frankly, it would not surprise this author if Palmer was not guilty of murder at all.
-
-    Additionally, this event shows the discontent of the labor class bubbling up in the post industrial-revolution world. The individual that was murdered was Mr. Berner's boss. It gives us a taste of the momentum the labor movement was gathering, and a prelude to the ideological turns that would come in the early 20th century.`,
-    event_id: 15,
-    user_id: 2,
+    title: 'The Sacking of Troy',
+    content: `Sing to me, O Muse, of the great sacking of Troy, that fateful day when the city fell and the once-great walls were reduced to rubble. The Trojan War, that long and bitter struggle between the Achaean forces and the proud defenders of Troy, had raged on for years with no end in sight. But on that day, the Achaeans, led by the cunning Odysseus and the mighty Achilles, breached the walls and poured into the city, sword in hand. The streets were awash with blood, as the Trojans fought with desperate courage to defend their homes and families. But in the end, the Achaean forces proved too powerful, and Troy fell to their relentless assault. And so it was that the great city of Priam, once so mighty and proud, lay in ruins, a testament to the terrible cost of war.`,
+    event_id: 44,
+    user_id: 1,
   },
   {
-    title: 'The Labor Movement as a Burgeoning Dam',
-    content: `These riots were born from the discontent of the working class (in more ways than one). In the early stages of the labor movement, there was a growing sense of pressure building up among workers who had long been exploited and mistreated by their employers. Like a dam that has been slowly filling with water, this pressure eventually reached a breaking point, and the labor movement burst forth with incredible force. Just as a burst dam can unleash a torrent of water that can reshape the landscape, the labor movement had a profound impact on the social and economic landscape of the United States and other countries. It brought about major changes in labor laws and regulations, helped to establish workers' rights and protections, and paved the way for the creation of labor unions that continue to fight for fair wages and working conditions to this day. While the early stages of the labor movement were undoubtedly tumultuous and at times violent, they ultimately represented a powerful and necessary force for change in a world that was deeply unequal and unjust.`,
-    event_id: 15,
-    user_id: 6,
+    title: 'My Cursed Birthday',
+    content: `Perhaps this is something that everyone has (since history is lined with millions of corpses) but my birthday has some really brutal events associated with it. Thich Quang Duc self immolated. Henry VIII married Catherine of Aragon, and, in addition to many others, Troy was sacked.`,
+    event_id: 44,
+    user_id: 2,
   },
   {
     title: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit',
@@ -45,6 +42,21 @@ const blogData = [
     user_id: 2,
   },
   {
+    title: 'A Riot as a Snapshot of the Future to Be',
+    content: `While the riots occurred due to the very lax sentence given to William Berner (given a manslaughter charge for a premeditated murder,) the other perpetrator Joe Palmer, a man of mixed African and European descent, was not extended the same privilege. He was sentenced to be hanged.
+    It's one of countless examples of African-American men not being extended the same legal treatment as white citizens. Palmer's sentencing was so unremarkable at the time that, frankly, it would not surprise this author if Palmer was not guilty of murder at all.
+
+    Additionally, this event shows the discontent of the labor class bubbling up in the post industrial-revolution world. The individual that was murdered was Mr. Berner's boss. It gives us a taste of the momentum the labor movement was gathering, and a prelude to the ideological turns that would come in the early 20th century.`,
+    event_id: 15,
+    user_id: 2,
+  },
+  {
+    title: 'The Labor Movement as a Burgeoning Dam',
+    content: `These riots were born from the discontent of the working class (in more ways than one). In the early stages of the labor movement, there was a growing sense of pressure building up among workers who had long been exploited and mistreated by their employers. Like a dam that has been slowly filling with water, this pressure eventually reached a breaking point, and the labor movement burst forth with incredible force. Just as a burst dam can unleash a torrent of water that can reshape the landscape, the labor movement had a profound impact on the social and economic landscape of the United States and other countries. It brought about major changes in labor laws and regulations, helped to establish workers' rights and protections, and paved the way for the creation of labor unions that continue to fight for fair wages and working conditions to this day. While the early stages of the labor movement were undoubtedly tumultuous and at times violent, they ultimately represented a powerful and necessary force for change in a world that was deeply unequal and unjust.`,
+    event_id: 15,
+    user_id: 6,
+  },
+  {
     title: 'ChatGPT on the Pope & Venice',
     content: `In 1606, Pope Clement V issued a decree that excommunicated and interdicted Venice, a powerful city-state in Italy. This action was a response to Venice's refusal to submit to papal authority and its attempts to assert its independence from the Catholic Church. While the decree had significant consequences for Venice and its people, it also revealed larger tensions between the papacy and secular authorities during the early modern period.
 
@@ -69,18 +81,6 @@ const blogData = [
     title: 'Andrew Johnson was Always a Terrible Pick for Lincolns VP',
     content: `It's pretty remarkable that congress managed to overturn the veto. I guess that's at least one thing reconstruction got right, before it all fell to pieces.`,
     event_id: 13,
-    user_id: 2,
-  },
-  {
-    title: 'The Sacking of Troy',
-    content: `Sing to me, O Muse, of the great sacking of Troy, that fateful day when the city fell and the once-great walls were reduced to rubble. The Trojan War, that long and bitter struggle between the Achaean forces and the proud defenders of Troy, had raged on for years with no end in sight. But on that day, the Achaeans, led by the cunning Odysseus and the mighty Achilles, breached the walls and poured into the city, sword in hand. The streets were awash with blood, as the Trojans fought with desperate courage to defend their homes and families. But in the end, the Achaean forces proved too powerful, and Troy fell to their relentless assault. And so it was that the great city of Priam, once so mighty and proud, lay in ruins, a testament to the terrible cost of war.`,
-    event_id: 44,
-    user_id: 1,
-  },
-  {
-    title: 'My Cursed Birthday',
-    content: `Perhaps this is something that everyone has (since history is lined with millions of corpses) but my birthday has some really brutal events associated with it. Thich Quang Duc self immolated. Henry VIII married Catherine of Aragon, and, in addition to many others, Troy was sacked.`,
-    event_id: 44,
     user_id: 2,
   },
 ];
