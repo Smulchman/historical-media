@@ -192,3 +192,9 @@ body {
 .event-title:hover {
   cursor: pointer;
 }
+
+#yes-blogs {
+  margin-top: 30px;
+  font-size: 1.7rem;
+  text-align: left;
+}

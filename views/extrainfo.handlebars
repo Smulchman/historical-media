@@ -27,6 +27,7 @@
       >Blog about this event!</button>
   </div>
     {{#if event.blogs}}
+    <p id="yes-blogs">Blogs About This Event</p> 
       {{#each event.blogs as |info|}}
         {{> wikipartials info}}
       {{/each}}
