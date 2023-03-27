@@ -20,7 +20,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-To install this application, you need clone the repository. To clone the repository, you go to the green button on the repository that says "< > Code". Then you can choose to copy either the https url or the ssh url if you have a ssh key. After you copy the link, then you go to your terminal on your computer and in the terminal, you change the current directory to the directory you want to place the cloned repository in and then you type "git clone" and paste the url. Finally, you hit enter and the repository will be on your machine and you can open the index.html in your browser by right clicking the html in the directory and choosing which browser to open it in. This application is also deployed on Heroku so you can view it on heroku using the deployed page.
+To install this application, you need clone the repository. To clone the repository, you go to the green button on the repository that says "< > Code". Then you can choose to copy either the https url or the ssh url if you have a ssh key. After you copy the link, then you go to your terminal on your computer and in the terminal, you change the current directory to the directory you want to place the cloned repository in and then you type "git clone" and paste the url. Finally, you hit enter and the repository will be on your machine and you can open the index.html in your browser by right clicking the html in the directory and choosing which browser to open it in. This application is also deployed on Heroku so you can view it on heroku using the deployed page. The deployed Heroku link is https://calm-castle-61617.herokuapp.com/. 
 
 ## Usage
 
@@ -34,25 +34,21 @@ This application license is: MIT
 
 ## Contribution
 
-Sam Mulcahy - https://github.com/Smulchman
-Elvis Diaz - https://github.com/Elvisdiaz1
-Jimmy Dai - https://github.com/Alien-oyi
-Laert Xhumari - https://github.com/LaertXh
-Jared Andreassi - https://github.com/jAndreassi
+- Sam Mulcahy - https://github.com/Smulchman
+- Elvis Diaz - https://github.com/Elvisdiaz1
+- Jimmy Dai - https://github.com/Alien-oyi
+- Laert Xhumari - https://github.com/LaertXh
+- Jared Andreassi - https://github.com/jAndreassi
 
 ## Credits
 
-Express - https://www.npmjs.com/package/express
-Mysql - https://www.npmjs.com/package/mysql
-Sequelize - https://www.npmjs.com/package/sequelize
-Node.js - https://nodejs.org/en
-Handlebars - https://www.npmjs.com/package/handlebars
-Mysql2 - https://www.npmjs.com/package/mysql2
-Node Cron - https://www.npmjs.com/package/node-cron
-
-## Tests
-
-none currently (may be subject to change)
+- Express - https://www.npmjs.com/package/express
+- Mysql - https://www.npmjs.com/package/mysql
+- Sequelize - https://www.npmjs.com/package/sequelize
+- Node.js - https://nodejs.org/en
+- Handlebars - https://www.npmjs.com/package/handlebars
+- Mysql2 - https://www.npmjs.com/package/mysql2
+- Node Cron - https://www.npmjs.com/package/node-cron
 
 ## Questions
 
