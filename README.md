@@ -26,7 +26,7 @@ To install this application, you need clone the repository. To clone the reposit
 
 When you load into the website, you will see a small list of historical events that occured on the current day and a feed of people who made a post on one of the events. You can go to the events page to view more events. You can click on one of the events on the homepage or events page, which will let you to create a post about the event, allowing you to say something about the post. However, you must sign up and login with your own email and password in order to create a post of the events. To sign up or login, You can either click on the respective buttons to take you to their page. Attempting to create a post will also redirect to the sign up or login page if you have not logged in.
 
-<!-- ADD SCREENSHOTS OR VIDEOS HERE IF NEED BE -->
+![image](https://user-images.githubusercontent.com/37091234/227969948-d0897626-8ec2-4824-9627-778c675924f4.png)
 
 ## License
 
