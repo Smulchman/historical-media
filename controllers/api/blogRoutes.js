@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { Blog, User, Event } = require("../../models");
 const withAuth = require("../../utils/auth.js");
-const sequelize = require("../../config/connection");
 
 // add a new blog POST("api/blog")
 router.post("/", withAuth, async (req, res) => {
@@ -87,10 +86,5 @@ router.get("/dashboard", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// More blogs page
-// router.get("/more-blogs", async (req, res) => {
-//   res.render("more-blogs");
-// });
 
 module.exports = router;
